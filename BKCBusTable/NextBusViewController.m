@@ -19,6 +19,10 @@
 #define VALUE_SETA 7
 #define VALUE_CHUSHOJIMA 8
 
+//UIColor定義
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface NextBusViewController ()
 
 @end
@@ -107,37 +111,44 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
                 [self.nameArr addObject:@"南草津（直行）"];
                 [self.dateArr addObject:@"06:20"];//本来はキーが入る
                 [self.priceArr addObject:@"220"];
-            break;
-        case 2://南草津（かがやき通り経由）
+                [self.colorArr addObject:RGB(135,206,250)];
+                break;
+            case 2://南草津（かがやき通り経由）
                 [self.nameArr addObject:@"南草津（かがやき通り経由）"];
                 [self.dateArr addObject:@"06:25"];
                 [self.priceArr addObject:@"250"];
-            break;
-        case 3://南草津（笠山経由）
+                [self.colorArr addObject:RGB(173, 255, 47)];
+                break;
+            case 3://南草津（笠山経由）
                 [self.nameArr addObject:@"南草津（笠山経由）"];
                 [self.dateArr addObject:@"06:30"];
                 [self.priceArr addObject:@"250"];
-            break;
-        case 4://南草津（パナ経由）
+                [self.colorArr addObject:RGB(255, 127, 80)];
+                break;
+            case 4://南草津（パナ経由）
                 [self.nameArr addObject:@"南草津（パナ経由）"];
                 [self.dateArr addObject:@"06:35"];
                 [self.priceArr addObject:@"220"];
-            break;
-        case 5://大津
+                [self.colorArr addObject:RGB(238, 130, 238)];
+                break;
+            case 5://大津
                 [self.nameArr addObject:@"大津"];
                 [self.dateArr addObject:@"06:40"];
                 [self.priceArr addObject:@"250"];
-            break;
-        case 6://草津
+                [self.colorArr addObject:RGB(238, 201, 0)];
+                break;
+            case 6://草津
                 [self.nameArr addObject:@"草津"];
                 [self.dateArr addObject:@"06:45"];
                 [self.priceArr addObject:@"220"];
-            break;
-        case 7://瀬田
+                [self.colorArr addObject:RGB(255, 110, 180)];
+                break;
+            case 7://瀬田
                 [self.nameArr addObject:@"瀬田"];
                 [self.dateArr addObject:@"06:50"];
                 [self.priceArr addObject:@"250"];
-            break;
+                [self.colorArr addObject:RGB(205, 150, 205)];
+                break;
         //case 08://中書島
           //  self.nameLabel.text = @"中書島";
             //self.dateLabel.text = @"06:55";
@@ -183,7 +194,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 -(void)updateCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Update Cells
-    self.cell.backgroundColor = [UIColor greenColor];
     NSLog(@"test3");
     //テスト
 
@@ -211,6 +221,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     memoLabel.font = [UIFont systemFontOfSize:14];
     memoLabel.backgroundColor = [UIColor clearColor];
     [self.cell.contentView addSubview:memoLabel];
+    //背景色
+    self.cell.backgroundColor = [self.colorArr objectAtIndex:(NSUInteger)indexPath.row];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier =@"Cell";
