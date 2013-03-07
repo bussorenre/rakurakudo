@@ -233,6 +233,10 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     NSLog(@"test4");
+    for (tableView in [cell.contentView subviews]) {
+        [tableView removeFromSuperview];
+    }
+
     [self updateCell:cell atIndexPath:indexPath];
     return cell;
 }
