@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1-MT600</key>
+	<string>600</string>
+	<key>1-MT605</key>
+	<string>605</string>
+	<key>1-MT610</key>
+	<string>610</string>
+	<key>1-MT615</key>
+	<string>615</string>
+	<key>1-MT620</key>
+	<string>620</string>
+	<key>1-MT625</key>
+	<string>625</string>
+	<key>1-MT630</key>
+	<string>630</string>
+	<key>2-MKY602</key>
+	<string>602</string>
+	<key>2-MKY604</key>
+	<string>604</string>
+	<key>2-MKY606</key>
+	<string>606</string>
+	<key>2-MKY608</key>
+	<string>608</string>
+	<key>2-MKY610</key>
+	<string>610</string>
+	<key>3-MKS601</key>
+	<string>601</string>
+	<key>3-MKS602</key>
+	<string>602</string>
+	<key>3-MKS603</key>
+	<string>603</string>
+	<key>3-MKS607</key>
+	<string>607</string>
+	<key>4-MKP612</key>
+	<string>612</string>
+	<key>4-MKP617</key>
+	<string>617</string>
+	<key>5-OTS615</key>
+	<string>615</string>
+	<key>5-OTS620</key>
+	<string>620</string>
+	<key>6-KST610</key>
+	<string>610</string>
+	<key>6-KST630</key>
+	<string>630</string>
+	<key>7-SET700</key>
+	<string>700</string>
+	<key>7-SET705</key>
+	<string>705</string>
+	<key>8-TSJ612</key>
+	<string>612</string>
+	<key>8-TSJ735</key>
+	<string>735</string>
+	<key>8-TSJ740</key>
+	<string>740</string>
+	<key>8-TSJ800</key>
+	<string>800</string>
+	<key>8-TSJ805</key>
+	<string>805</string>
+</dict>
+</plist>

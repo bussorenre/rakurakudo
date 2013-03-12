@@ -8,6 +8,7 @@
 
 #import "NextBusViewController.h"
 #import "NextBusTableViewController.h"
+#import "DateController.h"
 
 //Value(行き先）を定義
 #define VALUE_MINAKUSA_CHOKUTSU 1
@@ -33,6 +34,8 @@
 @synthesize cell;
 @synthesize nameLabel,dateLabel,priceLabel,memoLabel;
 @synthesize nameArr,dateArr,priceArr,colorArr;
+@synthesize dateController;
+@synthesize returnedArr;
 
 -(id)init{
     self = [super init];
@@ -47,6 +50,9 @@
         table = [[UITableView alloc]initWithFrame:CGRectMake(0,0,320,360) style:UITableViewStyleGrouped];
         table.delegate = self;
         table.dataSource = self;
+        
+        dateController = [[DateController alloc]init];
+        NSLog(@"ここで３回？");
         
         [self.view addSubview:table];
     }
@@ -77,8 +83,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //セクション内の行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     [self updateArr];
-    NSLog(@"%d",[self.nameArr count])
-    ;
+    
+    NSLog(@"%d",[self.nameArr count]);
     return [self.nameArr count];
 }
 //テーブルセル作成
@@ -92,6 +98,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     self.dateArr = [[NSMutableArray alloc]initWithCapacity:10];
     self.priceArr = [[NSMutableArray alloc]initWithCapacity:10];
     self.colorArr = [[NSMutableArray alloc]initWithCapacity:10];
+    //配列をうけとる
+    returnedArr = [[NSMutableArray alloc]initWithArray:[self.dateController compare]];
+    //キーに対応しているバリューの配列を生成 要素にはint型で格納
     
     //for文でtestArrに並び替えた配列を要素順に格納する
     //テスト用配列
@@ -109,51 +118,52 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
         switch(arr[i]){
             case 1://南草津（直行）
                 [self.nameArr addObject:@"南草津（直行）"];
-                [self.dateArr addObject:@"06:20"];//本来はキーが入る
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];//本来はキーが入る
                 [self.priceArr addObject:@"220"];
                 [self.colorArr addObject:RGB(135,206,250)];
                 break;
             case 2://南草津（かがやき通り経由）
                 [self.nameArr addObject:@"南草津（かがやき通り経由）"];
-                [self.dateArr addObject:@"06:25"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
                 [self.priceArr addObject:@"250"];
                 [self.colorArr addObject:RGB(173, 255, 47)];
                 break;
             case 3://南草津（笠山経由）
                 [self.nameArr addObject:@"南草津（笠山経由）"];
-                [self.dateArr addObject:@"06:30"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
                 [self.priceArr addObject:@"250"];
                 [self.colorArr addObject:RGB(255, 127, 80)];
                 break;
             case 4://南草津（パナ経由）
                 [self.nameArr addObject:@"南草津（パナ経由）"];
-                [self.dateArr addObject:@"06:35"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
                 [self.priceArr addObject:@"220"];
                 [self.colorArr addObject:RGB(238, 130, 238)];
                 break;
             case 5://大津
                 [self.nameArr addObject:@"大津"];
-                [self.dateArr addObject:@"06:40"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
                 [self.priceArr addObject:@"250"];
                 [self.colorArr addObject:RGB(238, 201, 0)];
                 break;
             case 6://草津
                 [self.nameArr addObject:@"草津"];
-                [self.dateArr addObject:@"06:45"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
                 [self.priceArr addObject:@"220"];
                 [self.colorArr addObject:RGB(255, 110, 180)];
                 break;
             case 7://瀬田
                 [self.nameArr addObject:@"瀬田"];
-                [self.dateArr addObject:@"06:50"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
                 [self.priceArr addObject:@"250"];
                 [self.colorArr addObject:RGB(205, 150, 205)];
                 break;
-        //case 08://中書島
-          //  self.nameLabel.text = @"中書島";
-            //self.dateLabel.text = @"06:55";
-            //self.priceLabel.text = @"600";
-            //break;
+            case 8://中書島
+                [self.nameArr addObject:@"中書島"];
+                [self.dateArr addObject:[returnedArr objectAtIndex:i]];
+                [self.priceArr addObject:@"600"];
+                [self.colorArr addObject:RGB(205, 150, 205)];
+                break;                
             default:
             break;
                 
@@ -195,6 +205,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 -(void)updateCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Update Cells
     NSLog(@"test3");
+    //returnedArr = [[NSMutableArray alloc]initWithArray:[self.dateController compare]];
+    
     //テスト
 
     //名前
@@ -216,11 +228,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     priceLabel.backgroundColor = [UIColor clearColor];
     [self.cell.contentView addSubview:priceLabel];
     //メモ
-    memoLabel = [[UILabel alloc]initWithFrame:CGRectMake(10,76,270,18)];
-    memoLabel.text = [NSString stringWithFormat:@"メモ："];
-    memoLabel.font = [UIFont systemFontOfSize:14];
-    memoLabel.backgroundColor = [UIColor clearColor];
-    [self.cell.contentView addSubview:memoLabel];
+    //memoLabel = [[UILabel alloc]initWithFrame:CGRectMake(10,76,270,18)];
+    //memoLabel.text = [NSString stringWithFormat:@"メモ："];
+    //memoLabel.font = [UIFont systemFontOfSize:14];
+    //memoLabel.backgroundColor = [UIColor clearColor];
+    //[self.cell.contentView addSubview:memoLabel];
     //背景色
     self.cell.backgroundColor = [self.colorArr objectAtIndex:(NSUInteger)indexPath.row];
 }
@@ -236,8 +248,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     for (tableView in [cell.contentView subviews]) {
         [tableView removeFromSuperview];
     }
-
+    //updateCell;adIndexPath;
     [self updateCell:cell atIndexPath:indexPath];
+    NSLog(@"show date below");
     return cell;
 }
 //各行の高さの設定

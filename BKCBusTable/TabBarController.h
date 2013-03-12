@@ -11,7 +11,10 @@
 @interface TabBarController : UITabBarController
 {
     UITabBarItem *tbi1,*tbi2,*tbi3;
+    UINavigationBar *navi;
     
 }
 @property(nonatomic,retain)UITabBarItem *tbi1,*tbi2,*tbi3;
+@property(nonatomic,retain)UINavigationBar *navi;
+-(void)update:(BOOL)bl;
 @end

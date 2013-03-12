@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "NextBusTableViewController.h"
+#import "DateController.h"
 
 @interface NextBusViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NextBusTableViewController *nextBusTableViewController;
+    
+    DateController *dateController;
     
     NSMutableArray *tableList;//テーブルの中身を入れておく
     
@@ -23,6 +26,8 @@
     UILabel *nameLabel,*dateLabel,*priceLabel,*memoLabel;
     //テスト用配列
     NSMutableArray *nameArr,*dateArr,*priceArr,*colorArr;
+    //受け取る配列
+    NSMutableArray *returnedArr;
 }
 //全ての配列を更新
 -(void)updateArr;
@@ -36,4 +41,6 @@
 @property(nonatomic,retain)NextBusTableViewController *nextBusTableViewController;
 @property(nonatomic,retain)UILabel *nameLabel,*dateLabel,*priceLabel,*memoLabel;
 @property(nonatomic,retain)NSMutableArray *nameArr,*dateArr,*priceArr,*colorArr;
+@property(nonatomic,retain)DateController *dateController;
+@property(nonatomic,retain)NSMutableArray *returnedArr;
 @end
