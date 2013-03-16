@@ -9,6 +9,11 @@
 #import "BusViewController.h"
 #import "DateController.h"
 
+//UIColor定義 RGB(,,);
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+
 @interface BusViewController ()
 
 @end
@@ -139,6 +144,7 @@ titleForHeaderInSection:(NSInteger)section{
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier =@"Cell";
     self.dateController = [[[DateController alloc]init]autorelease];
+    NSLog(@"sssssssss%d",[self.dateController.arrayCHU_2 count]);
     //テーブルセル用意
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     //新規セル作成
@@ -175,9 +181,23 @@ titleForHeaderInSection:(NSInteger)section{
         
     }
     if(indexPath.section == 8){
-        
+        //背景変更
+        self.cell.backgroundColor = RGB(191,62,255);
+
     }
     if(indexPath.section == 9){
+        //周辺の住民たちの空いてる時間と学生が空いてる時間の違い？
+        //別々でラベル生成し、条件によって分ける
+        //１５行に設定して、配列の要素数を取得、その値
+        //その配列の要素数以下なら実行、上回ると停止
+        //if([self.dateController.arrayCHU_1 count]
+        
+        
+        
+        //
+        
+        //背景変更
+        self.cell.backgroundColor = RGB(171,130,255);
        // UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(15,30,280,20)];
         int hour,min,hour2,min2;
         hour =[[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]/100;
@@ -207,6 +227,7 @@ titleForHeaderInSection:(NSInteger)section{
         [self.cell.contentView addSubview:lbl];
         }
     }
+         
     return cell;
 }
 //各行の高さの設定

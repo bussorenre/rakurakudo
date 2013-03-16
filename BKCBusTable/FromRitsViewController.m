@@ -9,6 +9,7 @@
 #import "FromRitsViewController.h"
 #import "DateController.h"
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 //UIColor定義 RGB(,,);
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
@@ -103,6 +104,8 @@
         UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(130,10,100,20)];
         label1.backgroundColor = [UIColor clearColor];
         label1.text = @"南草津";
+        [[view1 layer] setBorderColor:[RGB(0,0,0) CGColor]];
+        [[view1 layer] setBorderWidth:1.0f];
         [self.view1 addSubview:label1];
         [self.view addSubview:view1];
         
@@ -111,6 +114,8 @@
         label2.backgroundColor = [UIColor clearColor];
         int n = 10;
         label2.text = [NSString stringWithFormat:@"分"];
+        [[view2 layer] setBorderColor:[RGB(0,0,0) CGColor]];
+        [[view2 layer] setBorderWidth:1.0f];
         [self.view2 addSubview:label2];
         label2_2 = [[UILabel alloc]initWithFrame:CGRectMake(5,15,50,50)];
         label2_2.backgroundColor = [UIColor clearColor];
@@ -142,6 +147,8 @@
         label3_3.text = @"直行";
         label3_3.backgroundColor = [UIColor clearColor];
         [self.view3 addSubview:label3_3];
+        [[view3 layer] setBorderColor:[RGB(0,0,0) CGColor]];
+        [[view3 layer] setBorderWidth:1.0f];
         [self.view addSubview:view3];
         
         view4.backgroundColor = RGB(0,255,127);
@@ -161,6 +168,8 @@
         label4_3.text = @"かがやき経由";
         label4_3.backgroundColor = [UIColor clearColor];
         [self.view4 addSubview:label4_3];
+        [[view4 layer] setBorderColor:[RGB(0,0,0) CGColor]];
+        [[view4 layer] setBorderWidth:1.0f];
         [self.view addSubview:view4];
         
         view5.backgroundColor = RGB(0,255,0);
@@ -180,6 +189,8 @@
         label5_3.text = @"パナ経由";
         label5_3.backgroundColor = [UIColor clearColor];
         [self.view5 addSubview:label5_3];
+        [[view5 layer] setBorderColor:[RGB(0,0,0) CGColor]];
+        [[view5 layer] setBorderWidth:1.0f];
         [self.view addSubview:view5];
         
         view6.backgroundColor = RGB(205,149,12);
