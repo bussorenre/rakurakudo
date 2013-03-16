@@ -390,7 +390,7 @@
 			);
 			name = "GoogleAdMobAdsSdkiOS-6.3.0";
 			path = "../../Downloads/GoogleAdMobAdsSdkiOS-6.3.0";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		BE88C78C16EDEDA0008C6EF4 /* AdWhirl */ = {
 			isa = PBXGroup;
