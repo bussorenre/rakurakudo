@@ -404,7 +404,7 @@
 			);
 			name = AdWhirl;
 			path = ../../Downloads/AdWhirlSDK_iOS_3.3.0/AdWhirl;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		BE88C78D16EDEDA0008C6EF4 /* adapters */ = {
 			isa = PBXGroup;
