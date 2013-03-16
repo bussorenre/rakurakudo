@@ -38,16 +38,6 @@
             
         }
         //広告表示
-        //ツールバー生成
-        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-        toolbar.barStyle = UIBarStyleBlackTranslucent;
-        toolbar.backgroundColor = [UIColor blackColor];
-        [self.view addSubview:toolbar];
-        //ボタン生成
-        UIBarButtonItem *button1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:nil];
-        UIBarButtonItem *flexible = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        NSArray *items = [[NSArray alloc]initWithObjects:flexible,button1,nil];
-        [toolbar setItems:items];
         
 
     }

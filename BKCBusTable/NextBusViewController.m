@@ -34,7 +34,7 @@
 @synthesize cell;
 @synthesize nameLabel,dateLabel,priceLabel,memoLabel;
 @synthesize nameArr,dateArr,priceArr,colorArr;
-@synthesize dateController;
+//@synthesize dateController;
 @synthesize returnedArr;
 
 -(id)init{
@@ -51,7 +51,7 @@
         table.delegate = self;
         table.dataSource = self;
         
-        dateController = [[DateController alloc]init];
+        //dateController = [[DateController alloc]init];
         NSLog(@"ここで３回？");
         
         [self.view addSubview:table];
@@ -99,7 +99,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     self.priceArr = [[NSMutableArray alloc]initWithCapacity:10];
     self.colorArr = [[NSMutableArray alloc]initWithCapacity:10];
     //配列をうけとる
-    returnedArr = [[NSMutableArray alloc]initWithArray:[self.dateController compare]];
+    //
+    //returnedArr = [[NSMutableArray alloc]initWithArray:[self.dateController compare]];
     //キーに対応しているバリューの配列を生成 要素にはint型で格納
     
     //for文でtestArrに並び替えた配列を要素順に格納する

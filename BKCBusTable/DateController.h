@@ -68,6 +68,8 @@
     //残りの分数を返す場合、メソッドを１つ用意し、そのメソッドで現在時刻と比較、計算し残り分数を返す
 NSMutableArray *arrayCHU_1,*arrayCHU_2;
 NSDictionary *dictCHU_1,*dictCHU_2;
+    NSArray *yArr;
+    NSDictionary *tDict;
 }
 -(int)returnMin:(int)n;
 -(NSMutableArray *)sort:(NSArray *)arr;
@@ -81,4 +83,6 @@ NSDictionary *dictCHU_1,*dictCHU_2;
 @property(nonatomic,retain)NSDictionary *dictV;
 @property(nonatomic,retain)NSMutableArray *arrayCHU_1,*arrayCHU_2;
 @property(nonatomic,retain)NSDictionary *dictCHU_1,*dictCHU_2;
+@property(nonatomic,retain)NSArray *tArr;
+@property(nonatomic,retain)NSDictionary *tDict;
 @end

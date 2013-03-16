@@ -7,37 +7,211 @@
 //
 
 #import "BusViewController.h"
+#import "DateController.h"
 
 @interface BusViewController ()
 
 @end
 
 @implementation BusViewController
-@synthesize arr;
-
+@synthesize table;
+@synthesize cell;
+@synthesize dateController;
 -(id)init{
     self = [super init];
     if(self){
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(110,30,300,50)];
-    label.text = @"BKCバス時刻表";
-    [self.view addSubview:label];
-    
-        //セグメントボタン生成
-        arr = [NSArray arrayWithObjects:@"南草津",@"瀬田/草津",@"中書島/衣笠",nil];
-        UISegmentedControl *seg = [[UISegmentedControl alloc]initWithItems:arr];
-        seg.frame = CGRectMake(5,320,310,30);
-        seg.segmentedControlStyle = UITableViewStylePlain;
-        seg.selectedSegmentIndex = 0;
-        [seg addTarget:self action:@selector(changed)
-      forControlEvents:UIControlEventValueChanged];
-        [self.view addSubview:seg];
+  //      self.dateController = [[[DateController alloc]init]autorelease];
+        NSLog(@"in BusViewCOntoller %@",[dateController.tDict objectForKey:[dateController.tArr objectAtIndex:0]]);
+        NSLog(@"%d",[dateController.arrayCHU_1 count]);
+        
+        UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0,40,320,330)];
+
+        table = [[UITableView alloc]initWithFrame:CGRectMake(0,0,320,330) style:UITableViewStyleGrouped];
+        table.delegate = self;
+        table.dataSource = self;
+        [view1 addSubview:table];
+        
+        [self.view addSubview:view1];
+        
 
     }
     return self;
 }
-
--(void)changed{
-
+//セクション数
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tebleView{
+    return 10;
+}
+//セクション内の行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    //self.dateController = [[[DateController alloc]init]autorelease];
+    int n;
+    //第１セクションの設定
+    if (section==0) {
+        n = 5;
+        
+    }
+    
+    //第２セクションの設定
+    else if (section==1) {
+       // return @"南草津（直行）";
+        n = 5;
+    }
+    else if (section == 2){
+        //return @"南草津（かがやき経由）";
+        n = 5;
+    }
+    else if (section == 3){
+        //return @"南草津（パナ経由）";
+        n = 5;
+    }
+    else if (section == 4){
+        //return @"草津（かがやき）";
+        n = 5;
+    }
+    else if (section == 5){
+        //return @"草津（パナ）";
+        n = 5;
+    }
+    else if (section == 6){
+        //return @"瀬田";
+        n = 5;
+    }
+    else if (section == 7){
+        //return @"長寿社会福祉センター";
+        n = 5;
+    }
+    else if (section == 8){
+        //return @"大津";
+        n = 5;
+    }
+    else if (section == 9){
+        //return @"中書島";
+        //NSLog(@"セクション %@",[dateController.arrayCHU_1 objectAtIndex:0]);
+        //NSLog(@"------%d",[dateController.arrayCHU_1 count]);
+        //n = [dateController.arrayCHU_1 count];
+        //n = [self.dateController.arrayCHU_1 count];
+        n = 14;
+    }
+    
+    return n;
+}
+//セクションのタイトルを設定
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section{
+    //self.dateController = [[[DateController alloc]init]autorelease];
+    //第１セクションの設定
+    if (section==0) {
+        return @"南草津（笠山経由）";
+    }
+    
+    //第２セクションの設定
+    else if (section==1) {
+        return @"南草津（直行）";
+    }
+    else if (section == 2){
+        return @"南草津（かがやき経由）";
+    }
+    else if (section == 3){
+        return @"南草津（パナ経由）";
+    }
+    else if (section == 4){
+        return @"草津（かがやき）";
+    }
+    else if (section == 5){
+        return @"草津（パナ）";
+    }
+    else if (section == 6){
+        return @"瀬田";
+    }
+    else if (section == 7){
+        return @"長寿社会福祉センター";
+    }
+    else if (section == 8){
+        return @"大津";
+    }
+    else if (section == 9){
+        return @"中書島";
+    }
+    
+    
+    return nil;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier =@"Cell";
+    self.dateController = [[[DateController alloc]init]autorelease];
+    //テーブルセル用意
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //新規セル作成
+    if(cell == nil){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    for (tableView in [cell.contentView subviews]) {
+        [tableView removeFromSuperview];
+    }
+    
+    //グループごとに配列を格納
+    if(indexPath.section == 0){
+    
+    }
+    if(indexPath.section == 1){
+        
+    }
+    if(indexPath.section == 2){
+        
+    }
+    if(indexPath.section == 3){
+        
+    }
+    if(indexPath.section == 4){
+        
+    }
+    if(indexPath.section == 5){
+        
+    }
+    if(indexPath.section == 6){
+        
+    }
+    if(indexPath.section == 7){
+        
+    }
+    if(indexPath.section == 8){
+        
+    }
+    if(indexPath.section == 9){
+       // UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(15,30,280,20)];
+        int hour,min,hour2,min2;
+        hour =[[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]/100;
+        min = [[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]%100;
+        hour2 =[[dateController.arrayCHU_2 objectAtIndex:(NSUInteger)indexPath.row] intValue]/100;
+        min2 = [[dateController.arrayCHU_2 objectAtIndex:(NSUInteger)indexPath.row] intValue]%100;
+        if(indexPath.row == 0){
+            UILabel *lbl1 = [[UILabel alloc]initWithFrame:CGRectMake(15,30,380,20)];
+            UILabel *lbl0 = [[UILabel alloc]initWithFrame:CGRectMake(15,5,280,20)];
+            lbl0.text = @"    立命館発                 立命館着";
+            lbl0.backgroundColor = [UIColor clearColor];
+            [self.cell.contentView addSubview:lbl0];
+        lbl1.font = [UIFont fontWithName:nil size:14];
+        lbl1.numberOfLines = 0;
+        lbl1.backgroundColor = [UIColor clearColor];
+        lbl1.text = [NSString stringWithFormat:@"　　%02d:%02d　　　　　　%02d:%02d",hour,min,hour2,min2];
+            [self.cell.contentView addSubview:lbl1];
+        }else{
+        UILabel *lbl = [[UILabel alloc]initWithFrame:CGRectMake(15,15,280,20)];
+        lbl.font = [UIFont fontWithName:nil size:14];
+        lbl.numberOfLines = 0;
+        lbl.backgroundColor = [UIColor clearColor];
+        lbl.text = [NSString stringWithFormat:@"　　%02d:%02d　　　　　　%02d:%02d",hour,min,hour2,min2];
+        
+        //NSLog(@"-------%@",[self.dateController.arrayCHU_1 objectAtIndex:0]);
+        //lbl.text = @"aaaa";
+        [self.cell.contentView addSubview:lbl];
+        }
+    }
+    return cell;
+}
+//各行の高さの設定
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

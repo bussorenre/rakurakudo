@@ -14,7 +14,7 @@
 {
     NextBusTableViewController *nextBusTableViewController;
     
-    DateController *dateController;
+    //DateController *dateController;
     
     NSMutableArray *tableList;//テーブルの中身を入れておく
     
@@ -41,6 +41,6 @@
 @property(nonatomic,retain)NextBusTableViewController *nextBusTableViewController;
 @property(nonatomic,retain)UILabel *nameLabel,*dateLabel,*priceLabel,*memoLabel;
 @property(nonatomic,retain)NSMutableArray *nameArr,*dateArr,*priceArr,*colorArr;
-@property(nonatomic,retain)DateController *dateController;
+//@property(nonatomic,retain)DateController *dateController;
 @property(nonatomic,retain)NSMutableArray *returnedArr;
 @end

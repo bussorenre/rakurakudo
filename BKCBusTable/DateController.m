@@ -40,10 +40,13 @@
 @synthesize dictV;
 @synthesize arrayCHU_1,arrayCHU_2;
 @synthesize dictCHU_1,dictCHU_2;
+@synthesize tArr;
+@synthesize tDict;
 
 -(id)init{
           self = [super init];
           if(self){
+              NSLog(@"do init");
               
               //NSArray *pathArray = [[NSArray alloc]initWithObjects:@"tTableCHU_1",@"tTableCHU_2",nil];
               
@@ -52,15 +55,15 @@
               
               //NSArray *arrayArr = [[NSArray alloc]initWithObjects:arrayCHU_1,arrayCHU_2, nil];
               
-              NSArray *tArr = [[NSArray alloc]init];
-              NSDictionary *tDict = [[NSDictionary alloc]init];
+              tArr = [[NSArray alloc]init];
+              tDict = [[NSDictionary alloc]init];
               NSBundle *bundle = [NSBundle mainBundle];
               NSString *paths = [bundle pathForResource:@"tTableCHU_1" ofType:@"plist"];
               tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
               //tArr = [NSArray array];
               tArr = [tDict allKeys]; //初回、不変な配列に格納される
               arrayCHU_1 = [NSMutableArray arrayWithArray:[self sort:tArr]];
-              NSLog(@"arrayCHU_1 count = %d",[arrayCHU_1 count]);
+              NSLog(@"arrayCHU_1 count = %d,%@",[arrayCHU_1 count],[arrayCHU_1 objectAtIndex:0]);
               
               
               tArr = [[NSArray alloc]init];
@@ -72,7 +75,7 @@
               tArr = [tDict allKeys]; //初回、不変な配列に格納される
               NSLog(@"%d",[tArr count]);
               arrayCHU_2 = [NSMutableArray arrayWithArray:[self sort:tArr]];
-              NSLog(@"arrayCHU_2 count =%d",[arrayCHU_2 count]);
+              NSLog(@"arrayCHU_2 count =%d、%@",[arrayCHU_2 count],[arrayCHU_2 objectAtIndex:0]);
               
               
               /*for(int i = 0;i<[pathArray count];i++){
@@ -119,9 +122,10 @@
     return tempArr;
 
 }
+/*
 -(void)dealloc{
     [super dealloc];
-}
+}*/
 
 -(int)returnMin:(int)n{
     int min = 0; //この値を返す
@@ -147,6 +151,7 @@
     NSString *str = [NSString stringWithFormat:@"%02d%02d",hour,minute];
     //strをNSInteger型に変換
     NSInteger date = str.integerValue;
+    NSLog(@"time is %d",date);
     
     /*ここで場合わけ
      if(weekday == 2 || weekday == 3 || weekday == 4 || weekday == 5 || weekday == 6){//平日
@@ -341,6 +346,7 @@
                 int t = 1945;
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
+                    NSLog(@"%d",min);
                     break;
                 }else {}
             }

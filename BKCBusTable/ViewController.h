@@ -19,22 +19,25 @@
 
 @interface ViewController : UIViewController <AdWhirlDelegate>
 {
+    ViewController *viewContoller;
     TabBarController *tabBarController;
     BusViewController *busViewController;
     //NextBusViewController *nextBusViewController;
     //SettingViewController *settingViewController;
     FromRitsViewController *fromRitsViewController;
     ToRitsViewController *toRitsViewController;
-    DateController *dateController;
+    //DateController *dateController;
     AdWhirlView *adView;
 }
--(void)configureView;
+//-(void)configureView;
+-(void)update;
+@property(nonatomic,retain)ViewController *viewController;
 @property (nonatomic,retain)BusViewController *busViewController;
 //@property(nonatomic,retain)NextBusViewController *nextBusViewController;
 @property(nonatomic,retain)TabBarController *tabBarController;
 //@property(nonatomic,retain)SettingViewController *settingViewController;
 @property(nonatomic,retain)FromRitsViewController *fromRitsViewController;
 @property(nonatomic,retain)ToRitsViewController *toRitsViewController;
-@property(nonatomic,retain)DateController *dateController;
+//@property(nonatomic,retain)DateController *dateController;
 @property(nonatomic,retain)AdWhirlView *adView;
 @end

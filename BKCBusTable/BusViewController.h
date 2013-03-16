@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BusViewController : UIViewController
+#import "DateController.h"
+@interface BusViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
-    NSArray *arr;
+    NSMutableArray *tableList;
+    UITableView *table;
+    UITableViewCell *cell;
+    DateController *dateController;
   
 }
-//@property(nonatomic,retain)BusViewController *BusViewController;
-@property(nonatomic,retain)NSArray *arr;
--(void)changed;
+@property(nonatomic,retain)UITableView *table;
+@property(nonatomic,retain)UITableViewCell *cell;
+@property(nonatomic,retain)DateController *dateController;
 @end
