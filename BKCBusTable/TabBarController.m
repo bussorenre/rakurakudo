@@ -29,13 +29,14 @@
             
             // iPhone5より前のモデル のときの処理
             //UITabBarControllerのタブの高さ変更
-            float offset = 8.0;
+            float offset = 9.0;
             CGRect tabFrame = self.tabBar.frame;
             tabFrame.origin.y += offset;
             tabFrame.size.height -= offset;
             self.tabBar.frame = tabFrame;
-            self.view.bounds = self.tabBar.bounds; // <- (*)
-            
+            self.view.bounds = self.tabBar.bounds;
+            // <- (*)
+            NSLog(@"tabFrame.height = %f",tabFrame.size.height);
         }
         //広告表示
         

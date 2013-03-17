@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import "BusViewController.h"
-#import "NextBusViewController.h"
 #import "TabBarController.h"
-#import "SettingViewController.h"
+
+//時刻の画面に移る前に、楽洛堂の初期画面を表示する。
+//初期画面はUIViewで生成
+
 
 
 @interface ViewController ()
@@ -29,8 +31,8 @@
 @synthesize adView;
 -(id)init{
     
+    CGRect frame = [[UIScreen mainScreen]applicationFrame];
     
-    CGRect frame = [[UIScreen mainScreen] applicationFrame];
     
     if (frame.size.height > 500.0) { // iPhone 4inch (568 - 20 px)
         
@@ -53,6 +55,7 @@
     //settingViewController = [[SettingViewController alloc]init];//各種設定
     fromRitsViewController = [[FromRitsViewController alloc]init];//立命館大学発
     toRitsViewController = [[ToRitsViewController alloc]init]; //立命館着
+    
     
     [self update];
     
@@ -96,10 +99,21 @@
 -(void)update{
     self.fromRitsViewController.dateController = [[DateController alloc]init];
     self.toRitsViewController.dateController = [[DateController alloc]init];
-    int num = [self.fromRitsViewController.dateController returnMin:10];
-    self.fromRitsViewController.label16_2.text = [NSString stringWithFormat:@"%3d",num];
-    int num2 = [self.toRitsViewController.dateController returnMin:20];
-    self.toRitsViewController.label16_2.text = [NSString stringWithFormat:@"%d",num2];
+    int num;
+    
+    //南草津行き（笠山経由）
+    num = [self.fromRitsViewController.dateController returnMin:1];
+    self.fromRitsViewController.label2_2.text = [NSString stringWithFormat:@"%3d",num];
+    //中書島行き
+    num = [self.fromRitsViewController.dateController returnMin:10];
+    self.fromRitsViewController.label17_2.text = [NSString stringWithFormat:@"%3d",num];
+    
+    //立命館大学行き（笠山経由）
+    num = [self.fromRitsViewController.dateController returnMin:11];
+    self.toRitsViewController.label2_2.text = [NSString stringWithFormat:@"%3d",num];
+    //立命館大学行き（中書島）
+    num = [self.toRitsViewController.dateController returnMin:20];
+    self.toRitsViewController.label16_2.text = [NSString stringWithFormat:@"%3d",num];
     
 }
 /*AdWhirlデリゲート*/

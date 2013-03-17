@@ -69,7 +69,7 @@
         label2_2.backgroundColor = [UIColor clearColor];
         label2_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
         //int n = 10;
-        label2_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)1]*/];
+        //label2_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)1]*/];
         [self.view2 addSubview:label2_2];
         UILabel *label2_3 = [[UILabel alloc]initWithFrame:CGRectMake(5,2,60,20)];
         label2_3.font = [UIFont fontWithName:@"Marker Felt" size:12];

@@ -66,8 +66,8 @@
     /*ボックス版*/
     //起動時に全pリストを配列に格納する。初回のみ
     //残りの分数を返す場合、メソッドを１つ用意し、そのメソッドで現在時刻と比較、計算し残り分数を返す
-NSMutableArray *arrayCHU_1,*arrayCHU_2;
-NSDictionary *dictCHU_1,*dictCHU_2;
+    NSMutableArray *arrayCHU_1,*arrayCHU_2,*arrayMKS_1,*arrayMKS_2;
+    NSDictionary *dictCHU_1,*dictCHU_2;
     NSArray *yArr;
     NSDictionary *tDict;
 }
@@ -81,7 +81,7 @@ NSDictionary *dictCHU_1,*dictCHU_2;
 @property(nonatomic, retain)NSArray *keyArr;
 @property(nonatomic,retain)NSMutableArray *key,*valueArr,*returnedArr,*sortedArr;
 @property(nonatomic,retain)NSDictionary *dictV;
-@property(nonatomic,retain)NSMutableArray *arrayCHU_1,*arrayCHU_2;
+@property(nonatomic,retain)NSMutableArray *arrayCHU_1,*arrayCHU_2,*arrayMKS_1,*arrayMKS_2;
 @property(nonatomic,retain)NSDictionary *dictCHU_1,*dictCHU_2;
 @property(nonatomic,retain)NSArray *tArr;
 @property(nonatomic,retain)NSDictionary *tDict;

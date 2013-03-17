@@ -191,10 +191,32 @@ titleForHeaderInSection:(NSInteger)section{
         //１５行に設定して、配列の要素数を取得、その値
         //その配列の要素数以下なら実行、上回ると停止
         //if([self.dateController.arrayCHU_1 count]
+        //
+        /*
+        int hour,min,hour2,min2;
+        hour =[[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]/100;
+        min = [[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]%100;
+        hour2 =[[dateController.arrayCHU_2 objectAtIndex:(NSUInteger)indexPath.row] intValue]/100;
+        min2 = [[dateController.arrayCHU_2 objectAtIndex:(NSUInteger)indexPath.row] intValue]%100;
+
+        UILabel *lbl1 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,280,20)];
+        lbl1.text = [NSString stringWithFormat:@"立命館発　　　　　　　立命館着"];
+        lbl1.font = [UIFont fontWithName:nil size:18];
+        lbl1.backgroundColor = [UIColor clearColor];
+        [self.cell.contentView addSubview:lbl1];
+        
+        for(int i =0;i<10;i++){
+            UILabel *lbl2 = [[UILabel alloc]initWithFrame:CGRectMake(5,30,280,200)];
+            lbl2.text = [NSString stringWithFormat:@"%02d:%02d",hour,min];
+            lbl2.font = [UIFont fontWithName:nil size:14];
+            lbl2.backgroundColor = [UIColor clearColor];
+            [self.cell.contentView addSubview:lbl2];
+        }*/
         
         
         
         //
+        
         
         //背景変更
         self.cell.backgroundColor = RGB(171,130,255);
@@ -225,6 +247,7 @@ titleForHeaderInSection:(NSInteger)section{
         //NSLog(@"-------%@",[self.dateController.arrayCHU_1 objectAtIndex:0]);
         //lbl.text = @"aaaa";
         [self.cell.contentView addSubview:lbl];
+         
         }
     }
          

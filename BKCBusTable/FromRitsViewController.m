@@ -21,17 +21,17 @@
 @end
 
 @implementation FromRitsViewController
-@synthesize view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11,view12,view13,view14,view15,view16;
+@synthesize view1,view2,view3,view4,view5,view6,view7,view8,view9,view10,view11,view12,view13,view14,view15,view16,view17;
 @synthesize adView;
 @synthesize dateController;
-@synthesize label2_2,label3_2,label4_2,label5_2,label7_2,label8_2,label10_2,label11_2,label12_2,label14_2,label16_2;
+@synthesize label2_2,label3_2,label4_2,label5_2,label6_2,label7_2,label8_2,label9_2,label10_2,label11_2,label12_2,label13_2,label14_2,label15_2,label16_2,label17_2;
 -(id)init{
 
     self = [super init];
     if(self){
         
+        self.view.backgroundColor = RGB(0,0,0);
         //NSLog(@"arrayCHU_1 in dateController = %@",[super.ViewController.dateController objectAtIndex:0] );
-        
         
         //dateController = [[DateController alloc]init];
         int num = 0;;
@@ -53,6 +53,7 @@
         view14 = [[UIView alloc]init];
         view15 = [[UIView alloc]init];
         view16 = [[UIView alloc]init];
+        view17 = [[UIView alloc]init];
         
         CGRect frame = [[UIScreen mainScreen] applicationFrame];
         
@@ -85,22 +86,23 @@
             view3.frame = CGRectMake(82.5,77,77.5,70);
             view4.frame = CGRectMake(160,77,77.5,70);
             view5.frame = CGRectMake(237.5,77,77.5,70);
-            view6.frame = CGRectMake(5,152,200,35);
+            view6.frame = CGRectMake(5,152,100,35);
             view7.frame = CGRectMake(5,187,100,70);
-            view8.frame = CGRectMake(105,187,100,70);
-            view9.frame = CGRectMake(210,152,105,35);
-            view10.frame = CGRectMake(210,187,105,70);
-            view11.frame = CGRectMake(5,262,100,35);
-            view12.frame = CGRectMake(5,297,100,70);
-            view13.frame = CGRectMake(110,262,100,35);
-            view14.frame = CGRectMake(110,297,100,70);
-            view15.frame = CGRectMake(215,262,100,35);
-            view16.frame = CGRectMake(215,297,100,70);
+            view8.frame = CGRectMake(110,152,100,35);
+            view9.frame = CGRectMake(110,187,100,70);
+            view10.frame = CGRectMake(215,152,100,35);
+            view11.frame = CGRectMake(215,187,100,70);
+            view12.frame = CGRectMake(5,262,100,35);
+            view13.frame = CGRectMake(5,297,100,70);
+            view14.frame = CGRectMake(110,262,100,35);
+            view15.frame = CGRectMake(110,297,100,70);
+            view16.frame = CGRectMake(215,262,100,35);
+            view17.frame = CGRectMake(215,297,100,70);
         }
         
         
         
-        view1.backgroundColor = RGB(127,255,0);
+        view1.backgroundColor = RGB(100,149,237);
         UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(130,10,100,20)];
         label1.backgroundColor = [UIColor clearColor];
         label1.text = @"南草津";
@@ -109,19 +111,20 @@
         [self.view1 addSubview:label1];
         [self.view addSubview:view1];
         
-        view2.backgroundColor = RGB(84,255,159);
+        view2.backgroundColor = RGB(255,255,255);
         UILabel *label2 = [[UILabel alloc]initWithFrame:CGRectMake(50,20,50,50)];
         label2.backgroundColor = [UIColor clearColor];
         int n = 10;
         label2.text = [NSString stringWithFormat:@"分"];
+        /*
         [[view2 layer] setBorderColor:[RGB(0,0,0) CGColor]];
         [[view2 layer] setBorderWidth:1.0f];
-        [self.view2 addSubview:label2];
+        [self.view2 addSubview:label2];*/
         label2_2 = [[UILabel alloc]initWithFrame:CGRectMake(5,15,50,50)];
         label2_2.backgroundColor = [UIColor clearColor];
         label2_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
         //int n = 10;
-        label2_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)1]*/];
+        //label2_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)1]*/];
         [self.view2 addSubview:label2_2];
         UILabel *label2_3 = [[UILabel alloc]initWithFrame:CGRectMake(5,2,60,20)];
         label2_3.font = [UIFont fontWithName:@"Marker Felt" size:12];
@@ -130,7 +133,7 @@
         [self.view2 addSubview:label2_3];
         [self.view addSubview:view2];
         
-        view3.backgroundColor = RGB(154,255,154);
+        view3.backgroundColor = RGB(255,255,255);
         UILabel *label3 = [[UILabel alloc]initWithFrame:CGRectMake(50,20,50,50)];
         label3.backgroundColor = [UIColor clearColor];
         //int n = 10;
@@ -147,11 +150,9 @@
         label3_3.text = @"直行";
         label3_3.backgroundColor = [UIColor clearColor];
         [self.view3 addSubview:label3_3];
-        [[view3 layer] setBorderColor:[RGB(0,0,0) CGColor]];
-        [[view3 layer] setBorderWidth:1.0f];
         [self.view addSubview:view3];
         
-        view4.backgroundColor = RGB(0,255,127);
+        view4.backgroundColor = RGB(255,255,255);
         UILabel *label4 = [[UILabel alloc]initWithFrame:CGRectMake(50,20,50,50)];
         label4.backgroundColor = [UIColor clearColor];
         //int n = 10;
@@ -168,11 +169,9 @@
         label4_3.text = @"かがやき経由";
         label4_3.backgroundColor = [UIColor clearColor];
         [self.view4 addSubview:label4_3];
-        [[view4 layer] setBorderColor:[RGB(0,0,0) CGColor]];
-        [[view4 layer] setBorderWidth:1.0f];
         [self.view addSubview:view4];
         
-        view5.backgroundColor = RGB(0,255,0);
+        view5.backgroundColor = RGB(255,255,255);
         UILabel *label5 = [[UILabel alloc]initWithFrame:CGRectMake(50,20,50,50)];
         label5.backgroundColor = [UIColor clearColor];
         //int n = 10;
@@ -189,10 +188,82 @@
         label5_3.text = @"パナ経由";
         label5_3.backgroundColor = [UIColor clearColor];
         [self.view5 addSubview:label5_3];
-        [[view5 layer] setBorderColor:[RGB(0,0,0) CGColor]];
-        [[view5 layer] setBorderWidth:1.0f];
         [self.view addSubview:view5];
         
+        //add now 2013/3/17 below
+        
+        view6.backgroundColor = RGB(127,255,212);
+        UILabel *label6 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,80,20)];
+        label6.backgroundColor = [UIColor clearColor];
+        label6.text = @"草津";
+        label6.font = [UIFont fontWithName:@"Marker Felt" size:13];
+        [self.view addSubview:view6];
+        [self.view6 addSubview:label6];
+        
+        view7.backgroundColor = RGB(255,255,255);
+        UILabel *label7 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
+        label7.backgroundColor = [UIColor clearColor];
+        //int n = 10;
+        label7.text = [NSString stringWithFormat:@"分"];
+        [self.view7 addSubview:label7];
+        label7_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
+        label7_2.backgroundColor = [UIColor clearColor];
+        label7_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
+        //int n = 10;
+        label7_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)8]*/];
+        [self.view7 addSubview:label7_2];
+        [self.view addSubview:view7];
+        
+        view8.backgroundColor = RGB(255,129,80);
+        UILabel *label8 = [[UILabel alloc]initWithFrame:CGRectMake(30,10,80,20)];
+        label8.backgroundColor = [UIColor clearColor];
+        label8.text = @"大津";
+        [self.view addSubview:view8];
+        [self.view8 addSubview:label8];
+        
+        view9.backgroundColor = RGB(255,255,255);
+        UILabel *label9 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
+        label9.backgroundColor = [UIColor clearColor];
+        //int n = 10;
+        label9.text = [NSString stringWithFormat:@"分"];
+        [self.view9 addSubview:label9];
+        label9_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
+        label9_2.backgroundColor = [UIColor clearColor];
+        label9_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
+        //int n = 10;
+        label9_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)9]*/];
+        [self.view9 addSubview:label9_2];
+        [self.view addSubview:view9];
+        
+        view10.backgroundColor = RGB(218,112,214);
+        //UILabel *label7 = [[UILabel alloc]initWithFrame:CGRectMake(225,250,90,20)];
+        UILabel *label10 = [[UILabel alloc]initWithFrame:CGRectMake(25,10,90,20)];
+        label10.backgroundColor = [UIColor clearColor];
+        label10.text = @"瀬田";
+        [self.view addSubview:view10];
+        [self.view10 addSubview:label10];
+        
+        view11.backgroundColor = RGB(255,255,255);
+        UILabel *label11 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
+        label11.backgroundColor = [UIColor clearColor];
+        //int n = 10;
+        label11.text = [NSString stringWithFormat:@"分"];
+        [self.view11 addSubview:label11];
+        label11_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,60,50)];
+        label11_2.backgroundColor = [UIColor clearColor];
+        label11_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
+        /*num = [self.dateController returnMin:10];
+        NSLog(@"minutes is %d",num);
+        if(num > 200){
+            label16_2.text = @"終";
+        }else{
+            //label16_2.text = [NSString stringWithFormat:@"%3d",num];
+        }
+         */
+        [self.view11 addSubview:label11_2];
+        [self.view addSubview:view11];
+
+        /*
         view6.backgroundColor = RGB(205,149,12);
         UILabel *label6 = [[UILabel alloc]initWithFrame:CGRectMake(82,10,80,20)];
         label6.backgroundColor = [UIColor clearColor];
@@ -209,8 +280,9 @@
         label7_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
         label7_2.backgroundColor = [UIColor clearColor];
         label7_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
-        //int n = 10;
-        label7_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)5]*/];
+        //int n = 10;*/
+        /*
+        label7_2.text = [NSString stringWithFormat:@"%d",n[self.DateController method:(int)5]];
         [self.view7 addSubview:label7_2];
         UILabel *label7_3 = [[UILabel alloc]initWithFrame:CGRectMake(5,2,80,20)];
         label7_3.font = [UIFont fontWithName:@"Marker Felt" size:12];
@@ -229,7 +301,7 @@
         label8_2.backgroundColor = [UIColor clearColor];
         label8_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
         //int n = 10;
-        label8_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)6]*/];
+        label8_2.text = [NSString stringWithFormat:@"%d",n[self.DateController method:(int)6]];
         [self.view8 addSubview:label8_2];
         UILabel *label8_3 = [[UILabel alloc]initWithFrame:CGRectMake(5,2,60,20)];
         label8_3.font = [UIFont fontWithName:@"Marker Felt" size:12];
@@ -256,84 +328,84 @@
         label10_2.backgroundColor = [UIColor clearColor];
         label10_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
         //int n = 10;
-        label10_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)7]*/];
+        label10_2.text = [NSString stringWithFormat:@"%d",n[self.DateController method:(int)7]];
         [self.view10 addSubview:label10_2];
         [self.view addSubview:view10];
-        
-        view11.backgroundColor = RGB(255,20,147);
-        UILabel *label11 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,80,20)];
-        label11.backgroundColor = [UIColor clearColor];
-        label11.text = @"長寿社会福祉";
-        label11.font = [UIFont fontWithName:@"Marker Felt" size:13];
-        label11_2 = [[UILabel alloc]initWithFrame:CGRectMake(35,20,80,20)];
-        label11_2.backgroundColor = [UIColor clearColor];
-        label11_2.text = @"センター";
-        label11_2.font = [UIFont fontWithName:@"Marker Felt" size:13];
-        [self.view addSubview:view11];
-        [self.view11 addSubview:label11];
-        [self.view11 addSubview:label11_2];
-        
-        view12.backgroundColor = RGB(255,110,180);
-        UILabel *label12 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
+        */
+        view12.backgroundColor = RGB(162,205,90);
+        UILabel *label12 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,80,20)];
         label12.backgroundColor = [UIColor clearColor];
-        //int n = 10;
-        label12.text = [NSString stringWithFormat:@"分"];
-        [self.view12 addSubview:label12];
-        label12_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
+        label12.text = @"長寿社会福祉";
+        label12.font = [UIFont fontWithName:@"Marker Felt" size:13];
+        label12_2 = [[UILabel alloc]initWithFrame:CGRectMake(35,20,80,20)];
         label12_2.backgroundColor = [UIColor clearColor];
-        label12_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
-        //int n = 10;
-        label12_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)8]*/];
-        [self.view12 addSubview:label12_2];
+        label12_2.text = @"センター";
+        label12_2.font = [UIFont fontWithName:@"Marker Felt" size:13];
         [self.view addSubview:view12];
+        [self.view12 addSubview:label12];
+        [self.view12 addSubview:label12_2];
         
-        view13.backgroundColor = RGB(255,211,155);
-        UILabel *label13 = [[UILabel alloc]initWithFrame:CGRectMake(30,10,80,20)];
+        view13.backgroundColor = RGB(255,255,255);
+        UILabel *label13 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
         label13.backgroundColor = [UIColor clearColor];
-        label13.text = @"大津";
-        [self.view addSubview:view13];
+        //int n = 10;
+        label13.text = [NSString stringWithFormat:@"分"];
         [self.view13 addSubview:label13];
+        label13_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
+        label13_2.backgroundColor = [UIColor clearColor];
+        label13_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
+        //int n = 10;
+        label13_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)8]*/];
+        [self.view13 addSubview:label13_2];
+        [self.view addSubview:view13];
         
-        view14.backgroundColor = RGB(255,231,186);
-        UILabel *label14 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
+        view14.backgroundColor = RGB(238,238,0);
+        UILabel *label14 = [[UILabel alloc]initWithFrame:CGRectMake(30,10,80,20)];
         label14.backgroundColor = [UIColor clearColor];
-        //int n = 10;
-        label14.text = [NSString stringWithFormat:@"分"];
-        [self.view14 addSubview:label14];
-        label14_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
-        label14_2.backgroundColor = [UIColor clearColor];
-        label14_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
-        //int n = 10;
-        label14_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)9]*/];
-        [self.view14 addSubview:label14_2];
+        label14.text = @"衣笠";
         [self.view addSubview:view14];
+        [self.view14 addSubview:label14];
         
-        view15.backgroundColor = RGB(191,62,255);
-        //UILabel *label7 = [[UILabel alloc]initWithFrame:CGRectMake(225,250,90,20)];
-        UILabel *label15 = [[UILabel alloc]initWithFrame:CGRectMake(25,10,90,20)];
+        view15.backgroundColor = RGB(255,255,255);
+        UILabel *label15 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
         label15.backgroundColor = [UIColor clearColor];
-        label15.text = @"中書島";
-        [self.view addSubview:view15];
-        [self.view15 addSubview:label15];
-        
-        view16.backgroundColor = RGB(171,130,255);
-        UILabel *label16 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
-        label16.backgroundColor = [UIColor clearColor];
         //int n = 10;
-        label16.text = [NSString stringWithFormat:@"分"];
+        label15.text = [NSString stringWithFormat:@"分"];
+        [self.view15 addSubview:label15];
+        label15_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,50,50)];
+        label15_2.backgroundColor = [UIColor clearColor];
+        label15_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
+        //int n = 10;
+        label15_2.text = [NSString stringWithFormat:@"%d",n/*[self.DateController method:(int)9]*/];
+        [self.view15 addSubview:label15_2];
+        [self.view addSubview:view15];
+        
+        view16.backgroundColor = RGB(255,165,79);
+        //UILabel *label7 = [[UILabel alloc]initWithFrame:CGRectMake(225,250,90,20)];
+        UILabel *label16 = [[UILabel alloc]initWithFrame:CGRectMake(25,10,90,20)];
+        label16.backgroundColor = [UIColor clearColor];
+        label16.text = @"中書島";
+        [self.view addSubview:view16];
         [self.view16 addSubview:label16];
-        label16_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,60,50)];
-        label16_2.backgroundColor = [UIColor clearColor];
-        label16_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
+        
+        view17.backgroundColor = RGB(255,255,255);
+        UILabel *label17 = [[UILabel alloc]initWithFrame:CGRectMake(75,20,50,50)];
+        label17.backgroundColor = [UIColor clearColor];
+        //int n = 10;
+        label17.text = [NSString stringWithFormat:@"分"];
+        [self.view17 addSubview:label17];
+        label17_2 = [[UILabel alloc]initWithFrame:CGRectMake(20,15,60,50)];
+        label17_2.backgroundColor = [UIColor clearColor];
+        label17_2.font = [UIFont fontWithName:@"Marker Felt" size:40];
         num = [self.dateController returnMin:10];
         NSLog(@"minutes is %d",num);
         if(num > 200){
-            label16_2.text = @"終";
+            label17_2.text = @"終";
         }else{
         //label16_2.text = [NSString stringWithFormat:@"%3d",num];
         }
-        [self.view16 addSubview:label16_2];
-        [self.view addSubview:view16];
+        [self.view17 addSubview:label17_2];
+        [self.view addSubview:view17];
         
         //initでupdateメソッドを使う
         

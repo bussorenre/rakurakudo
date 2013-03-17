@@ -24,10 +24,7 @@
 		BE00A6E316E6DC93007097D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE00A6E116E6DC93007097D0 /* InfoPlist.strings */; };
 		BE00A6E616E6DC93007097D0 /* BKCBusTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A6E516E6DC93007097D0 /* BKCBusTableTests.m */; };
 		BE00A6F116E6E0E6007097D0 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A6F016E6E0E6007097D0 /* BusViewController.m */; };
-		BE00A6F416E6E0ED007097D0 /* BusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A6F316E6E0ED007097D0 /* BusTableViewController.m */; };
 		BE00A70616E6FF72007097D0 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A70516E6FF72007097D0 /* TabBarController.m */; };
-		BE00A75716E71008007097D0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A75616E71008007097D0 /* SettingViewController.m */; };
-		BE00A76216E71C0B007097D0 /* NextBusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A76116E71C0B007097D0 /* NextBusViewController.m */; };
 		BE00A77816E86E0E007097D0 /* DateController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A77716E86E0E007097D0 /* DateController.m */; };
 		BE00A77F16E8A833007097D0 /* TimeTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE00A77E16E8A833007097D0 /* TimeTable.plist */; };
 		BE00A78A16EB070F007097D0 /* FromRitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A78916EB070E007097D0 /* FromRitsViewController.m */; };
@@ -81,6 +78,12 @@
 		BE8C5E7A16F4E1D40068C5FA /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C5E5816F4E1D40068C5FA /* CJSONScanner.m */; };
 		BE8C5E7B16F4E1D40068C5FA /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C5E5A16F4E1D40068C5FA /* CJSONSerializer.m */; };
 		BE8C5E7C16F4E1D40068C5FA /* CSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8C5E5C16F4E1D40068C5FA /* CSerializedJSONData.m */; };
+		BE8C5E7E16F5EDAB0068C5FA /* tTableMPN_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E7D16F5EDAB0068C5FA /* tTableMPN_1.plist */; };
+		BE8C5E8016F5F08A0068C5FA /* tTableMPN_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E7F16F5F08A0068C5FA /* tTableMPN_2.plist */; };
+		BE8C5E8216F5F35E0068C5FA /* tTableMKG_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8116F5F35E0068C5FA /* tTableMKG_1.plist */; };
+		BE8C5E8416F5F5150068C5FA /* tTableMKG_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8316F5F5150068C5FA /* tTableMKG_2.plist */; };
+		BE8C5E8616F5F7330068C5FA /* tTableMKS_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8516F5F7330068C5FA /* tTableMKS_1.plist */; };
+		BE8C5E8816F5F7B90068C5FA /* tTableMKS_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,14 +121,8 @@
 		BE00A6E516E6DC93007097D0 /* BKCBusTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKCBusTableTests.m; sourceTree = "<group>"; };
 		BE00A6EF16E6E0E6007097D0 /* BusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusViewController.h; sourceTree = "<group>"; };
 		BE00A6F016E6E0E6007097D0 /* BusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusViewController.m; sourceTree = "<group>"; };
-		BE00A6F216E6E0ED007097D0 /* BusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusTableViewController.h; sourceTree = "<group>"; };
-		BE00A6F316E6E0ED007097D0 /* BusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusTableViewController.m; sourceTree = "<group>"; };
 		BE00A70416E6FF72007097D0 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		BE00A70516E6FF72007097D0 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		BE00A75516E71008007097D0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		BE00A75616E71008007097D0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		BE00A76016E71C0B007097D0 /* NextBusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextBusViewController.h; sourceTree = "<group>"; };
-		BE00A76116E71C0B007097D0 /* NextBusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextBusViewController.m; sourceTree = "<group>"; };
 		BE00A77616E86E0E007097D0 /* DateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateController.h; sourceTree = "<group>"; };
 		BE00A77716E86E0E007097D0 /* DateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateController.m; sourceTree = "<group>"; };
 		BE00A77E16E8A833007097D0 /* TimeTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeTable.plist; sourceTree = "<group>"; };
@@ -227,6 +224,12 @@
 		BE8C5E5A16F4E1D40068C5FA /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		BE8C5E5B16F4E1D40068C5FA /* CSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSerializedJSONData.h; sourceTree = "<group>"; };
 		BE8C5E5C16F4E1D40068C5FA /* CSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSerializedJSONData.m; sourceTree = "<group>"; };
+		BE8C5E7D16F5EDAB0068C5FA /* tTableMPN_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMPN_1.plist; sourceTree = "<group>"; };
+		BE8C5E7F16F5F08A0068C5FA /* tTableMPN_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMPN_2.plist; sourceTree = "<group>"; };
+		BE8C5E8116F5F35E0068C5FA /* tTableMKG_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKG_1.plist; sourceTree = "<group>"; };
+		BE8C5E8316F5F5150068C5FA /* tTableMKG_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKG_2.plist; sourceTree = "<group>"; };
+		BE8C5E8516F5F7330068C5FA /* tTableMKS_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKS_1.plist; sourceTree = "<group>"; };
+		BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKS_2.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,16 +341,16 @@
 				BE00A78916EB070E007097D0 /* FromRitsViewController.m */,
 				BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */,
 				BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */,
-				BE00A76016E71C0B007097D0 /* NextBusViewController.h */,
-				BE00A76116E71C0B007097D0 /* NextBusViewController.m */,
 				BE00A77616E86E0E007097D0 /* DateController.h */,
 				BE00A77716E86E0E007097D0 /* DateController.m */,
-				BE00A75516E71008007097D0 /* SettingViewController.h */,
-				BE00A75616E71008007097D0 /* SettingViewController.m */,
 				BE00A6EF16E6E0E6007097D0 /* BusViewController.h */,
 				BE00A6F016E6E0E6007097D0 /* BusViewController.m */,
-				BE00A6F216E6E0ED007097D0 /* BusTableViewController.h */,
-				BE00A6F316E6E0ED007097D0 /* BusTableViewController.m */,
+				BE8C5E7D16F5EDAB0068C5FA /* tTableMPN_1.plist */,
+				BE8C5E7F16F5F08A0068C5FA /* tTableMPN_2.plist */,
+				BE8C5E8116F5F35E0068C5FA /* tTableMKG_1.plist */,
+				BE8C5E8316F5F5150068C5FA /* tTableMKG_2.plist */,
+				BE8C5E8516F5F7330068C5FA /* tTableMKS_1.plist */,
+				BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */,
 				BE00A70416E6FF72007097D0 /* TabBarController.h */,
 				BE00A70516E6FF72007097D0 /* TabBarController.m */,
 				BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */,
@@ -592,6 +595,12 @@
 				BE88C59B16EBBB34008C6EF4 /* tTableCHU_1.plist in Resources */,
 				BE88C5AA16EC5FA5008C6EF4 /* tTableCHU_2.plist in Resources */,
 				BE8C5E6D16F4E1D40068C5FA /* AdWhirlWebBrowser.xib in Resources */,
+				BE8C5E7E16F5EDAB0068C5FA /* tTableMPN_1.plist in Resources */,
+				BE8C5E8016F5F08A0068C5FA /* tTableMPN_2.plist in Resources */,
+				BE8C5E8216F5F35E0068C5FA /* tTableMKG_1.plist in Resources */,
+				BE8C5E8416F5F5150068C5FA /* tTableMKG_2.plist in Resources */,
+				BE8C5E8616F5F7330068C5FA /* tTableMKS_1.plist in Resources */,
+				BE8C5E8816F5F7B90068C5FA /* tTableMKS_2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,10 +639,7 @@
 				BE00A6C516E6DC93007097D0 /* AppDelegate.m in Sources */,
 				BE00A6D116E6DC93007097D0 /* ViewController.m in Sources */,
 				BE00A6F116E6E0E6007097D0 /* BusViewController.m in Sources */,
-				BE00A6F416E6E0ED007097D0 /* BusTableViewController.m in Sources */,
 				BE00A70616E6FF72007097D0 /* TabBarController.m in Sources */,
-				BE00A75716E71008007097D0 /* SettingViewController.m in Sources */,
-				BE00A76216E71C0B007097D0 /* NextBusViewController.m in Sources */,
 				BE00A77816E86E0E007097D0 /* DateController.m in Sources */,
 				BE00A78A16EB070F007097D0 /* FromRitsViewController.m in Sources */,
 				BE88C5A316EC494E008C6EF4 /* ToRitsViewController.m in Sources */,

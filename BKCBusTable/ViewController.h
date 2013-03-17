@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BusViewController.h"
-#import "NextBusViewController.h"
 #import "TabBarController.h"
-#import "SettingViewController.h"
 #import "FromRitsViewController.h"
 #import "ToRitsViewController.h"
 #import "DateController.h"

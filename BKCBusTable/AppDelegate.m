@@ -7,11 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
+@synthesize viewContoller;
+    UIImageView *splashImageView;
 
 - (void)dealloc
 {
+    [splashImageView release];
+    [viewContoller release];
     [_window release];
     [super dealloc];
 }
@@ -19,8 +24,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    UIImage *splashImage = [UIImage imageNamed:@"Default.png"];
+    splashImageView = [[UIImageView alloc]initWithImage:splashImage];
+    [_window addSubview:splashImageView];
+    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onTimer) userInfo:nil repeats:NO];
+    
+    
     // Override point for customization after application launch.
     return YES;
+}
+-(void)onTimer{
+    [_window addSubview:viewContoller.view];
+    [splashImageView removeFromSuperview];
+    [splashImageView release];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

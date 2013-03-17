@@ -38,7 +38,7 @@
 @synthesize keyArr;
 @synthesize key,valueArr,returnedArr,sortedArr;
 @synthesize dictV;
-@synthesize arrayCHU_1,arrayCHU_2;
+@synthesize arrayCHU_1,arrayCHU_2,arrayMKS_1,arrayMKS_2;
 @synthesize dictCHU_1,dictCHU_2;
 @synthesize tArr;
 @synthesize tDict;
@@ -49,16 +49,20 @@
               NSLog(@"do init");
               
               //NSArray *pathArray = [[NSArray alloc]initWithObjects:@"tTableCHU_1",@"tTableCHU_2",nil];
+              //南草津（笠山経由）
+              arrayMKS_1 = [[[NSMutableArray alloc]init]autorelease];
+              arrayMKS_2 = [[[NSMutableArray alloc]init]autorelease];
               
-              arrayCHU_1 = [[NSMutableArray alloc]init];
-              arrayCHU_2 = [[NSMutableArray alloc]init];
-              
+              //中書島
+              arrayCHU_1 = [[[NSMutableArray alloc]init]autorelease];
+              arrayCHU_2 = [[[NSMutableArray alloc]init]autorelease];
+            
               //NSArray *arrayArr = [[NSArray alloc]initWithObjects:arrayCHU_1,arrayCHU_2, nil];
               
-              tArr = [[NSArray alloc]init];
-              tDict = [[NSDictionary alloc]init];
-              NSBundle *bundle = [NSBundle mainBundle];
-              NSString *paths = [bundle pathForResource:@"tTableCHU_1" ofType:@"plist"];
+              //中書島
+              tArr = [[[NSArray alloc]init]autorelease];;
+              tDict = [[[NSDictionary alloc]init]autorelease];
+              NSString *paths = [[NSBundle mainBundle] pathForResource:@"tTableCHU_1" ofType:@"plist"];
               tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
               //tArr = [NSArray array];
               tArr = [tDict allKeys]; //初回、不変な配列に格納される
@@ -66,10 +70,9 @@
               NSLog(@"arrayCHU_1 count = %d,%@",[arrayCHU_1 count],[arrayCHU_1 objectAtIndex:0]);
               
               
-              tArr = [[NSArray alloc]init];
-              tDict = [[NSDictionary alloc]init];
-              bundle = [NSBundle mainBundle];
-              paths = [bundle pathForResource:@"tTableCHU_2" ofType:@"plist"];
+              tArr = [[[NSArray alloc]init]autorelease];
+              tDict = [[[NSDictionary alloc]init]autorelease];
+              paths = [[NSBundle mainBundle] pathForResource:@"tTableCHU_2" ofType:@"plist"];
               tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
               //tArr = [NSArray array];
               tArr = [tDict allKeys]; //初回、不変な配列に格納される
@@ -77,6 +80,19 @@
               arrayCHU_2 = [NSMutableArray arrayWithArray:[self sort:tArr]];
               NSLog(@"arrayCHU_2 count =%d、%@",[arrayCHU_2 count],[arrayCHU_2 objectAtIndex:0]);
               
+              tArr = [[[NSArray alloc]init]autorelease];
+              tDict = [[[NSDictionary alloc]init]autorelease];
+              paths = [[NSBundle mainBundle]pathForResource:@"tTableMKS_1" ofType:@"plist"];
+              tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
+              tArr = [tDict allKeys];
+              NSLog(@"tTableMKS_1 = %d",[tArr count]);
+              arrayMKS_1 = [NSMutableArray arrayWithArray:[self sort:tArr]];
+              tArr = [[[NSArray alloc]init]autorelease];
+              tDict = [[[NSDictionary alloc]init]autorelease];
+              paths = [[NSBundle mainBundle]pathForResource:@"tTableMKS_2" ofType:@"plist"];
+              tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
+              tArr = [tDict allKeys];
+              arrayMKS_2 = [NSMutableArray arrayWithArray:[self sort:tArr]];
               
               /*for(int i = 0;i<[pathArray count];i++){
               
@@ -165,16 +181,21 @@
     
     //switch(引数)
     
+    NSString *strForArr;
+    NSInteger temp;
+    
     switch(n){
-        /*case 1://南草津（笠山）
-            int min = 0;
-            for(int i = 0;i<[配列 count];i++){
-                if(date < [[配列 objectAtIndex:i] intValue]){
-                    min = [[配列 objectAtIndex:i] intValue] - date;
-                    break;
-                }else {}
+        case 1://南草津（笠山）
+            for(int i = 0;i<[arrayMKS_1 count];i++){
+            strForArr = [arrayMKS_1 objectAtIndex:i];
+            temp = strForArr.intValue;;
+            if( date < temp){
+                min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
+                NSLog(@"min in case 1 is %d",min);
+                break;
+            }else {}
             }
-            break;
+            break;/*
         case 2://南草津（直行）
             int min = 0;
             for(int i = 0;i<[配列 count];i++){
@@ -249,24 +270,25 @@
             break;*/
         case 10://中書島
             for(int i = 0;i<[arrayCHU_1 count];i++){
-                NSString *str = [arrayCHU_1 objectAtIndex:i];
-                NSInteger temp = str.intValue;;
-                int t = 1134;
+                strForArr = [arrayCHU_1 objectAtIndex:i];
+                temp = strForArr.intValue;;
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
             break;
                 }else {}
             }
             break;
-            /*case 11://南草津（笠山）
-             int min = 0;
-             for(int i = 0;i<[配列 count];i++){
-             if(date < [[配列 objectAtIndex:i] intValue]){
-             min = [[配列 objectAtIndex:i] intValue] - date;
+            case 11://南草津（笠山）
+             for(int i = 0;i<[arrayMKS_2 count];i++){
+             strForArr = [arrayMKS_2 objectAtIndex:i];
+             temp = strForArr.intValue;;
+             if( date < temp){
+             min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
              break;
              }else {}
              }
              break;
+            /*
              case 12://南草津（直行）
              int min = 0;
              for(int i = 0;i<[配列 count];i++){
@@ -342,8 +364,7 @@
         case 20://中書島
             for(int i = 0;i<[arrayCHU_2 count];i++){
                 NSString *str = [arrayCHU_2 objectAtIndex:i];
-                NSInteger temp = str.intValue;;
-                int t = 1945;
+                NSInteger temp = str.intValue;
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
                     NSLog(@"%d",min);
