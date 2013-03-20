@@ -17,6 +17,7 @@
 {
     [splashImageView release];
     [viewContoller release];
+    [dateController release];
     [_window release];
     [super dealloc];
 }
@@ -29,6 +30,8 @@
     [_window addSubview:splashImageView];
     [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(onTimer) userInfo:nil repeats:NO];
     
+    //dateController = [[DateController alloc]init];
+    //NSLog(@"in AppDalegate %d",[self.dateController.arrayCHU_1 count]);
     
     // Override point for customization after application launch.
     return YES;

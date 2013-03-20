@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "BusViewController.h"
 #import "TabBarController.h"
-
 //時刻の画面に移る前に、楽洛堂の初期画面を表示する。
 //初期画面はUIViewで生成
 
@@ -27,6 +26,7 @@
 //@synthesize settingViewController;
 @synthesize fromRitsViewController;
 @synthesize toRitsViewController;
+@synthesize busTableViewController;
 //@synthesize dateController;
 @synthesize adView;
 -(id)init{
@@ -55,6 +55,7 @@
     //settingViewController = [[SettingViewController alloc]init];//各種設定
     fromRitsViewController = [[FromRitsViewController alloc]init];//立命館大学発
     toRitsViewController = [[ToRitsViewController alloc]init]; //立命館着
+    busTableViewController = [[BusTabelViewController alloc]init];
     
     
     [self update];
@@ -63,7 +64,7 @@
     //タブ設定
     //tabBarController.view.frame = CGRectMake(0,0,320,548);
     
-    NSArray *controllers = [NSArray arrayWithObjects:fromRitsViewController,toRitsViewController,busViewController, nil];
+    NSArray *controllers = [NSArray arrayWithObjects:fromRitsViewController,toRitsViewController,busTableViewController, nil];
     [tabBarController setViewControllers:controllers animated:NO];
     [[UITabBarItem appearance] setAccessibilityFrame:CGRectMake(0,0,320,30)];
     
@@ -103,17 +104,88 @@
     
     //南草津行き（笠山経由）
     num = [self.fromRitsViewController.dateController returnMin:1];
-    self.fromRitsViewController.label2_2.text = [NSString stringWithFormat:@"%3d",num];
+    self.fromRitsViewController.label2_2.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr1];
+    self.fromRitsViewController.label2.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr];
+    self.fromRitsViewController.label2_3.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr2];
+    self.fromRitsViewController.label2_4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr2];
+    //南草津行き（かがやき経由）
+    num = [self.fromRitsViewController.dateController returnMin:3];
+    self.fromRitsViewController.label4_2.text = [NSString stringWithFormat:@"%2@",self.fromRitsViewController.dateController.remStr1];
+    self.fromRitsViewController.label4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr];
+    self.fromRitsViewController.label4_3.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr2];
+    self.fromRitsViewController.label4_4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr2];
+    //南草津行き（パナ経由）
+    num = [self.fromRitsViewController.dateController returnMin:4];
+    self.fromRitsViewController.label5_2.text = [NSString stringWithFormat:@"%2@",self.fromRitsViewController.dateController.remStr1];
+    self.fromRitsViewController.label5.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr];
+    self.fromRitsViewController.label5_3.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr2];
+    self.fromRitsViewController.label5_4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr2];
+        //草津行き
+    num = [self.fromRitsViewController.dateController returnMin:5];
+    self.fromRitsViewController.label7_2.text = [NSString stringWithFormat:@"%2@",self.fromRitsViewController.dateController.remStr1];
+    self.fromRitsViewController.label7.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr];
+    self.fromRitsViewController.label7_3.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr2];
+    self.fromRitsViewController.label7_4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr2];
+    //瀬田行き
+    num = [self.fromRitsViewController.dateController returnMin:7];
+    self.fromRitsViewController.label11_2.text = [NSString stringWithFormat:@"%2@",self.fromRitsViewController.dateController.remStr1];
+    self.fromRitsViewController.label11.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr];
+    self.fromRitsViewController.label11_3.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr2];
+    self.fromRitsViewController.label11_4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr2];
+    
     //中書島行き
     num = [self.fromRitsViewController.dateController returnMin:10];
-    self.fromRitsViewController.label17_2.text = [NSString stringWithFormat:@"%3d",num];
+    self.fromRitsViewController.label17_2.text = [NSString stringWithFormat:@"%2@",self.fromRitsViewController.dateController.remStr1];
+    self.fromRitsViewController.label17.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr];
+    self.fromRitsViewController.label17_3.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.minStr2];
+    self.fromRitsViewController.label17_4.text = [NSString stringWithFormat:@"%@",self.fromRitsViewController.dateController.remStr2];
     
-    //立命館大学行き（笠山経由）
-    num = [self.fromRitsViewController.dateController returnMin:11];
-    self.toRitsViewController.label2_2.text = [NSString stringWithFormat:@"%3d",num];
-    //立命館大学行き（中書島）
+    
+    
+    
+    
+    //大学行き（笠山経由）
+    num = [self.toRitsViewController.dateController returnMin:11];
+    self.toRitsViewController.label2_2.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr1];
+    self.toRitsViewController.label2.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr];
+    self.toRitsViewController.label2_3.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr2];
+    self.toRitsViewController.label2_4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr2];
+    //大学行き（かがやき経由）
+    num = [self.toRitsViewController.dateController returnMin:13];
+    self.toRitsViewController.label4_2.text = [NSString stringWithFormat:@"%2@",self.toRitsViewController.dateController.remStr1];
+    self.toRitsViewController.label4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr];
+    self.toRitsViewController.label4_3.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr2];
+    self.toRitsViewController.label4_4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr2];
+    //大学行き（パナ経由）
+    num = [self.toRitsViewController.dateController returnMin:14];
+    self.toRitsViewController.label5_2.text = [NSString stringWithFormat:@"%2@",self.toRitsViewController.dateController.remStr1];
+    self.toRitsViewController.label5.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr];
+    self.toRitsViewController.label5_3.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr2];
+    self.toRitsViewController.label5_4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr2];
+    //大学行き（草津）
+    num = [self.fromRitsViewController.dateController returnMin:15];
+    self.toRitsViewController.label7_2.text = [NSString stringWithFormat:@"%2@",self.toRitsViewController.dateController.remStr1];
+    self.toRitsViewController.label7.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr];
+    self.toRitsViewController.label7_3.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr2];
+    self.toRitsViewController.label7_4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr2];
+    //大学行き(瀬田)
+    num = [self.toRitsViewController.dateController returnMin:17];
+    self.toRitsViewController.label11_2.text = [NSString stringWithFormat:@"%2@",self.toRitsViewController.dateController.remStr1];
+    self.toRitsViewController.label11.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr];
+    self.toRitsViewController.label11_3.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr2];
+    self.toRitsViewController.label11_4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr2];
+    
+    //大学行き（中書島)
     num = [self.toRitsViewController.dateController returnMin:20];
-    self.toRitsViewController.label16_2.text = [NSString stringWithFormat:@"%3d",num];
+    self.toRitsViewController.label17_2.text = [NSString stringWithFormat:@"%2@",self.toRitsViewController.dateController.remStr1];
+    self.toRitsViewController.label17.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr];
+    self.toRitsViewController.label17_3.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.minStr2];
+    self.toRitsViewController.label17_4.text = [NSString stringWithFormat:@"%@",self.toRitsViewController.dateController.remStr2];
+    
+    
+    
+    
+    
     
 }
 /*AdWhirlデリゲート*/

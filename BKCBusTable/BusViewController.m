@@ -8,6 +8,7 @@
 
 #import "BusViewController.h"
 #import "DateController.h"
+#import "AppDelegate.h"
 
 //UIColor定義 RGB(,,);
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
@@ -22,16 +23,37 @@
 @synthesize table;
 @synthesize cell;
 @synthesize dateController;
+@synthesize countForSec;
+@synthesize arrForKey,arrForValue;
 -(id)init{
     self = [super init];
     if(self){
-  //      self.dateController = [[[DateController alloc]init]autorelease];
-        NSLog(@"in BusViewCOntoller %@",[dateController.tDict objectForKey:[dateController.tArr objectAtIndex:0]]);
-        NSLog(@"%d",[dateController.arrayCHU_1 count]);
+       //self.dateController = [[[DateController alloc]init]autorelease];
+        //arrForKey = [[[NSMutableArray alloc]initWithArray:self.dateController.arrForTable]autorelease];
+        //arrForValue = [[[NSMutableArray alloc]initWithArray:self.dateController.arrForValue]autorelease];
+        //NSLog(@"in BusViewCOntoller %@",[self.arrForValue objectAtIndex:0]);
+        //並び替え
+        //arrForAll = [[[NSMutableArray alloc]initWithArray:[self.dateController sort:allArr]]autorelease];
+        //countForSec = [NSNumber numberWithInt:[arrForAll count]];
         
+        //全てのプロパティリストをひとつにまとまる。
+        //allArr = [[NSMutableArray alloc]initWithArray:nil];
+      /*
+        self.dateController = [[[DateController alloc]init]autorelease];
+        allArr = [[[NSMutableArray alloc]init]autorelease];
+        NSArray *arr = [[NSArray alloc]initWithObjects:self.dateController.arrayMKS_1,self.dateController.arrayMKG_1,self.dateController.arrayMPN_1,self.dateController.arrayKST_1,self.dateController.arraySET_1,self.dateController.arrayCHU_1, nil];
+        for(int i = 0;i<[arr count];i++){
+            for(int j  = 0;j<[[arr objectAtIndex:i] count];j++){
+                [allArr addObject:[[arr objectAtIndex:i] objectAtIndex:j]];
+            }
+        }
+        //並び替え
+        arrForAll = [[[NSMutableArray alloc]initWithArray:[self.dateController sort:allArr]]autorelease];
+        countForSec = [NSNumber numberWithInt:[arrForAll count]];
+        NSLog(@"%d",[arrForAll count]);*/
         UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0,40,320,330)];
 
-        table = [[UITableView alloc]initWithFrame:CGRectMake(0,0,320,330) style:UITableViewStyleGrouped];
+        table = [[UITableView alloc]initWithFrame:CGRectMake(0,0,320,330) style:UITableViewStylePlain];
         table.delegate = self;
         table.dataSource = self;
         [view1 addSubview:table];
@@ -44,18 +66,20 @@
 }
 //セクション数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tebleView{
-    return 10;
+    return 1;
 }
 //セクション内の行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     //self.dateController = [[[DateController alloc]init]autorelease];
     int n;
+    //AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    
     //第１セクションの設定
     if (section==0) {
-        n = 5;
+        n =171;
         
     }
-    
+    /*
     //第２セクションの設定
     else if (section==1) {
        // return @"南草津（直行）";
@@ -97,7 +121,7 @@
         //n = [self.dateController.arrayCHU_1 count];
         n = 14;
     }
-    
+    */
     return n;
 }
 //セクションのタイトルを設定
@@ -106,9 +130,9 @@ titleForHeaderInSection:(NSInteger)section{
     //self.dateController = [[[DateController alloc]init]autorelease];
     //第１セクションの設定
     if (section==0) {
-        return @"南草津（笠山経由）";
+        return @"時刻表";
     }
-    
+    /*
     //第２セクションの設定
     else if (section==1) {
         return @"南草津（直行）";
@@ -137,14 +161,29 @@ titleForHeaderInSection:(NSInteger)section{
     else if (section == 9){
         return @"中書島";
     }
-    
+    */
     
     return nil;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier =@"Cell";
-    self.dateController = [[[DateController alloc]init]autorelease];
+    /*
+     self.dateController = [[[DateController alloc]init]autorelease];
+    allArr = [[[NSMutableArray alloc]init]autorelease];
+    NSArray *arr = [[NSArray alloc]initWithObjects:self.dateController.arrayMKS_1,self.dateController.arrayMKG_1,self.dateController.arrayMPN_1,self.dateController.arrayKST_1,self.dateController.arraySET_1,self.dateController.arrayCHU_1, nil];
+    for(int i = 0;i<[arr count];i++){
+        for(int j  = 0;j<[[arr objectAtIndex:i] count];j++){
+            [allArr addObject:[[arr objectAtIndex:i] objectAtIndex:j]];
+        }
+    }
+    //並び替え
+    arrForAll = [[[NSMutableArray alloc]initWithArray:[self.dateController sort:allArr]]autorelease];
+    countForSec = [NSNumber numberWithInt:[arrForAll count]];
+
+    //全てのプロパティリストをひとつにまとまる。
+    allArr = [[NSMutableArray alloc]initWithArray:nil];
     NSLog(@"sssssssss%d",[self.dateController.arrayCHU_2 count]);
+     */
     //テーブルセル用意
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     //新規セル作成
@@ -155,6 +194,7 @@ titleForHeaderInSection:(NSInteger)section{
         [tableView removeFromSuperview];
     }
     
+    [self updateCell:cell atIndexPath:indexPath];    /*
     //グループごとに配列を格納
     if(indexPath.section == 0){
     
@@ -192,7 +232,7 @@ titleForHeaderInSection:(NSInteger)section{
         //その配列の要素数以下なら実行、上回ると停止
         //if([self.dateController.arrayCHU_1 count]
         //
-        /*
+        
         int hour,min,hour2,min2;
         hour =[[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]/100;
         min = [[dateController.arrayCHU_1 objectAtIndex:(NSUInteger)indexPath.row] intValue]%100;
@@ -211,7 +251,7 @@ titleForHeaderInSection:(NSInteger)section{
             lbl2.font = [UIFont fontWithName:nil size:14];
             lbl2.backgroundColor = [UIColor clearColor];
             [self.cell.contentView addSubview:lbl2];
-        }*/
+        }
         
         
         
@@ -250,12 +290,52 @@ titleForHeaderInSection:(NSInteger)section{
          
         }
     }
-         
+     */
     return cell;
+}
+- (void)updateCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    // Update Cells
+
+    self.dateController = [[DateController alloc]init];
+    arrForKey = [[[NSMutableArray alloc]initWithArray:self.dateController.arrForTable]autorelease];
+    arrForValue = [[[NSMutableArray alloc]initWithArray:self.dateController.arrForValue]autorelease];
+    
+    
+    UILabel *lbl1 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,155,20)];
+    NSString *str = [NSString stringWithFormat:@"%02d:%02d",[[self.arrForKey objectAtIndex:indexPath.row] intValue]/100,[[self.arrForKey objectAtIndex:indexPath.row] intValue]%100];
+    lbl1.text = [NSString stringWithFormat:@"%@",str];
+    lbl1.textAlignment = NSTextAlignmentLeft;
+    [self.cell.contentView addSubview:lbl1];
+    UILabel *lbl2 = [[UILabel alloc]initWithFrame:CGRectMake(160,5,155,20)];
+    NSString *str2;
+    switch ([[self.arrForValue objectAtIndex:indexPath.row] intValue]){
+        case 1://南草津（笠山経由）
+            str2 = @"南草津行き（笠山経由）";
+            break;
+        case 3://南草津（かがやき経由）
+            str2 = @"南草津行き（かがやき経由）";
+            break;
+        case 4://南草津（パナ）
+            str2 = @"南草津行き（パナ)";
+            break;
+        case 5://草津
+            str2 = @"草津行き";
+            break;
+        case 6://瀬田
+            str2= @"瀬田行き";
+            break;
+        case 7://中書島
+            str2 = @"中書島行き";
+            break;
+            default:
+            break;
+    }
+    lbl2.text = str2;
+    [self.cell.contentView addSubview];
 }
 //各行の高さの設定
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 30;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

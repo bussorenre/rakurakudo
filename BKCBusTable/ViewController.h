@@ -14,6 +14,7 @@
 #import "DateController.h"
 #import "AdWhirlView.h"
 #import "AdWhirlDelegateProtocol.h"
+#import "BusTabelViewController.h"
 
 @interface ViewController : UIViewController <AdWhirlDelegate>
 {
@@ -38,4 +39,5 @@
 @property(nonatomic,retain)ToRitsViewController *toRitsViewController;
 //@property(nonatomic,retain)DateController *dateController;
 @property(nonatomic,retain)AdWhirlView *adView;
+@property(nonatomic,retain)BusTabelViewController *busTableViewController;
 @end

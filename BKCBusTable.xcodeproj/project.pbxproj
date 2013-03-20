@@ -28,6 +28,10 @@
 		BE00A77816E86E0E007097D0 /* DateController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A77716E86E0E007097D0 /* DateController.m */; };
 		BE00A77F16E8A833007097D0 /* TimeTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE00A77E16E8A833007097D0 /* TimeTable.plist */; };
 		BE00A78A16EB070F007097D0 /* FromRitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A78916EB070E007097D0 /* FromRitsViewController.m */; };
+		BE39AACE16F84281008E13F5 /* tTableKST_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AACD16F84281008E13F5 /* tTableKST_1.plist */; };
+		BE39AAD116F84433008E13F5 /* tTableKST_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD016F84433008E13F5 /* tTableKST_2.plist */; };
+		BE39AAD316F845A5008E13F5 /* tTableSET_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD216F845A5008E13F5 /* tTableSET_1.plist */; };
+		BE39AAD516F8464F008E13F5 /* tTableSET_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */; };
 		BE88C59B16EBBB34008C6EF4 /* tTableCHU_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */; };
 		BE88C5A316EC494E008C6EF4 /* ToRitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */; };
 		BE88C5AA16EC5FA5008C6EF4 /* tTableCHU_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE88C5A916EC5FA5008C6EF4 /* tTableCHU_2.plist */; };
@@ -84,6 +88,7 @@
 		BE8C5E8416F5F5150068C5FA /* tTableMKG_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8316F5F5150068C5FA /* tTableMKG_2.plist */; };
 		BE8C5E8616F5F7330068C5FA /* tTableMKS_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8516F5F7330068C5FA /* tTableMKS_1.plist */; };
 		BE8C5E8816F5F7B90068C5FA /* tTableMKS_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */; };
+		BE9D544F16FA0175008E4090 /* BusTabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D544E16FA0175008E4090 /* BusTabelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +133,10 @@
 		BE00A77E16E8A833007097D0 /* TimeTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimeTable.plist; sourceTree = "<group>"; };
 		BE00A78816EB070E007097D0 /* FromRitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromRitsViewController.h; sourceTree = "<group>"; };
 		BE00A78916EB070E007097D0 /* FromRitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromRitsViewController.m; sourceTree = "<group>"; };
+		BE39AACD16F84281008E13F5 /* tTableKST_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKST_1.plist; sourceTree = "<group>"; };
+		BE39AAD016F84433008E13F5 /* tTableKST_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKST_2.plist; sourceTree = "<group>"; };
+		BE39AAD216F845A5008E13F5 /* tTableSET_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableSET_1.plist; sourceTree = "<group>"; };
+		BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableSET_2.plist; sourceTree = "<group>"; };
 		BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableCHU_1.plist; sourceTree = "<group>"; };
 		BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToRitsViewController.h; sourceTree = "<group>"; };
 		BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToRitsViewController.m; sourceTree = "<group>"; };
@@ -230,6 +239,8 @@
 		BE8C5E8316F5F5150068C5FA /* tTableMKG_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKG_2.plist; sourceTree = "<group>"; };
 		BE8C5E8516F5F7330068C5FA /* tTableMKS_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKS_1.plist; sourceTree = "<group>"; };
 		BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKS_2.plist; sourceTree = "<group>"; };
+		BE9D544D16FA0175008E4090 /* BusTabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusTabelViewController.h; sourceTree = "<group>"; };
+		BE9D544E16FA0175008E4090 /* BusTabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusTabelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +354,12 @@
 				BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */,
 				BE00A77616E86E0E007097D0 /* DateController.h */,
 				BE00A77716E86E0E007097D0 /* DateController.m */,
+				BE39AACD16F84281008E13F5 /* tTableKST_1.plist */,
+				BE39AAD016F84433008E13F5 /* tTableKST_2.plist */,
+				BE39AAD216F845A5008E13F5 /* tTableSET_1.plist */,
+				BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */,
+				BE9D544D16FA0175008E4090 /* BusTabelViewController.h */,
+				BE9D544E16FA0175008E4090 /* BusTabelViewController.m */,
 				BE00A6EF16E6E0E6007097D0 /* BusViewController.h */,
 				BE00A6F016E6E0E6007097D0 /* BusViewController.m */,
 				BE8C5E7D16F5EDAB0068C5FA /* tTableMPN_1.plist */,
@@ -601,6 +618,10 @@
 				BE8C5E8416F5F5150068C5FA /* tTableMKG_2.plist in Resources */,
 				BE8C5E8616F5F7330068C5FA /* tTableMKS_1.plist in Resources */,
 				BE8C5E8816F5F7B90068C5FA /* tTableMKS_2.plist in Resources */,
+				BE39AACE16F84281008E13F5 /* tTableKST_1.plist in Resources */,
+				BE39AAD116F84433008E13F5 /* tTableKST_2.plist in Resources */,
+				BE39AAD316F845A5008E13F5 /* tTableSET_1.plist in Resources */,
+				BE39AAD516F8464F008E13F5 /* tTableSET_2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +696,7 @@
 				BE8C5E7A16F4E1D40068C5FA /* CJSONScanner.m in Sources */,
 				BE8C5E7B16F4E1D40068C5FA /* CJSONSerializer.m in Sources */,
 				BE8C5E7C16F4E1D40068C5FA /* CSerializedJSONData.m in Sources */,
+				BE9D544F16FA0175008E4090 /* BusTabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

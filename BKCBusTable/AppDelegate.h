@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "DateController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     ViewController *viewController;
+    DateController *dateController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property(nonatomic,retain)ViewController *viewContoller;
+@property(nonatomic,retain)DateController *dateController;
 
 @end
