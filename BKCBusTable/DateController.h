@@ -66,7 +66,7 @@
     /*ボックス版*/
     //起動時に全pリストを配列に格納する。初回のみ
     //残りの分数を返す場合、メソッドを１つ用意し、そのメソッドで現在時刻と比較、計算し残り分数を返す
-    NSMutableArray *arrayCHU_1,*arrayCHU_2,*arrayMKS_1,*arrayMKS_2,*arrayMKG_1,*arrayMKG_2,*arrayMPN_1,*arrayMPN_2,*arrayKST_1,*arrayKST_2,*arraySET_1,*arraySET_2;
+    NSMutableArray *arrayCHU_1,*arrayCHU_2,*arrayMKS_1,*arrayMKS_2,*arrayMKG_1,*arrayMKG_2,*arrayMPN_1,*arrayMPN_2,*arrayKST_1,*arrayKST_2,*arraySET_1,*arraySET_2,*arrarKNG_1,*arrayKNG_2;
     NSDictionary *dictCHU_1,*dictCHU_2;
     NSArray *yArr;
     NSDictionary *tDict;
@@ -75,7 +75,7 @@
     //int num;
     
     //時刻表
-    NSMutableArray *arrForTable,*arrForValue;
+    NSMutableArray *arrForTable,*arrForValue,*arrForColor;
     
     
 }
@@ -90,12 +90,12 @@
 @property(nonatomic, retain)NSArray *keyArr;
 @property(nonatomic,retain)NSMutableArray *key,*valueArr,*returnedArr,*sortedArr;
 @property(nonatomic,retain)NSDictionary *dictV;
-@property(nonatomic,retain)NSMutableArray *arrayCHU_1,*arrayCHU_2,*arrayMKS_1,*arrayMKS_2,*arrayMKG_1,*arrayMKG_2,*arrayMPN_1,*arrayMPN_2,*arrayKST_1,*arrayKST_2,*arraySET_1,*arraySET_2;
+@property(nonatomic,retain)NSMutableArray *arrayCHU_1,*arrayCHU_2,*arrayMKS_1,*arrayMKS_2,*arrayMKG_1,*arrayMKG_2,*arrayMPN_1,*arrayMPN_2,*arrayKST_1,*arrayKST_2,*arraySET_1,*arraySET_2,*arrayKNG_1,*arrayKNG_2;
 @property(nonatomic,retain)NSDictionary *dictCHU_1,*dictCHU_2;
 @property(nonatomic,retain)NSArray *tArr;
 @property(nonatomic,retain)NSDictionary *tDict;
 @property(nonatomic,retain)NSString *minStr,*minStr2,*remStr1,*remStr2;
 @property(nonatomic,retain)NSNumber *num2;
-@property(nonatomic,retain)NSMutableArray *arrForTable,*arrForValue,*finalArr;
+@property(nonatomic,retain)NSMutableArray *arrForTable,*arrForValue,*finalArr,*arrForColor;
 //@property(nonatomic,retain)int num;
 @end

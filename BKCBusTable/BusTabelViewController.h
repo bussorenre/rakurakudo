@@ -14,4 +14,5 @@
 }
 @property (nonatomic,retain)DateController *dateController;
 @property(nonatomic,retain)NSMutableArray *arr;
+@property(nonatomic,retain)NSArray *arrForColor;
 @end

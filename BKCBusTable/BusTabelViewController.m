@@ -8,6 +8,11 @@
 
 #import "BusTabelViewController.h"
 
+//UIColor定義 RGB(,,);
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+
 @interface BusTabelViewController ()
 
 @end
@@ -15,6 +20,7 @@
 @implementation BusTabelViewController
 @synthesize dateController;
 @synthesize arr;
+@synthesize arrForColor;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -23,7 +29,15 @@
         // Custom initialization
        dateController = [[DateController alloc]init];
         arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable]];
+        arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+ 
+        UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        btn1.frame = CGRectMake(230,300,50,20);
+        [btn1 setTitle:@"立命館発" forState:UIControlStateNormal];
+        [self.view addSubview:btn1];
+    
     }
+    
     return self;
 }
 
@@ -63,7 +77,41 @@
     num = [self.arr count];
     return num;
 }
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch([[self.arrForColor objectAtIndex:indexPath.row] intValue]){
+        case 0://笠山
+            NSLog(@"aaa");
+            cell.backgroundColor = RGB(99, 184, 255);
+            break;
+        case 1://かがやき（直行）
+            NSLog(@"bbb");
+            cell.backgroundColor = RGB(99, 184, 255);
+            break;
+        case 2://パナ
+            NSLog(@"ccc");
+            cell.backgroundColor = RGB(99, 184, 255);
+            break;
+        case 3://草津
+            cell.backgroundColor = RGB(154, 205, 50);
+            break;
+        case 4://瀬田
+            cell.backgroundColor = RGB(205, 205, 0);
+            break;
+        case 5://衣笠
+            cell.backgroundColor = RGB(159,121,238);
+            break;
+        case 6://中書島
+            cell.backgroundColor = RGB(238, 59, 59);
+            break;
+        default:
+            NSLog(@"色の判定ができません");
+            break;
+    }
 
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"in tableView %@",[self.arr objectAtIndex:0]);
@@ -83,8 +131,7 @@
     
     //UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(2,2,300,30)];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.arr objectAtIndex:indexPath.row]];
-    
-    
+        
     return cell;
 }
 

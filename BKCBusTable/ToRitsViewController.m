@@ -77,38 +77,41 @@ label17,label17_2,label17_3,label17_4;
             NSLog(@"in height = 548");
             
             // iPhone5 のときの処理
-            view1.frame = CGRectMake(5,123,310,35);
-            view2.frame = CGRectMake(5,157,77.5,70);
-            view3.frame = CGRectMake(82.5,157,77.5,70);
-            view4.frame = CGRectMake(160,157,77.5,70);
-            view5.frame = CGRectMake(237.5,157,77.5,70);
-            view6.frame = CGRectMake(5,232,200,35);
-            view7.frame = CGRectMake(5,267,100,70);
-            view8.frame = CGRectMake(105,267,100,70);
-            view9.frame = CGRectMake(210,232,105,35);
-            view10.frame = CGRectMake(210,267,105,70);
-            view11.frame = CGRectMake(5,342,100,35);
-            view12.frame = CGRectMake(5,377,100,70);
-            view13.frame = CGRectMake(110,342,100,35);
-            view14.frame = CGRectMake(110,377,100,70);
-            view15.frame = CGRectMake(215,342,100,35);
-            view16.frame = CGRectMake(215,377,100,70);
+            view1.frame = CGRectMake(0,40,320,165);
+            view2.frame = CGRectMake(20,70,140,67.5);
+            view3.frame = CGRectMake(180,70,140,67.5);
+            view4.frame = CGRectMake(20,137.5,140,67.5);
+            view5.frame = CGRectMake(180,137.5,140,67.5);
+            //view6.frame = CGRectMake(20,205,140,30);
+            view7.frame = CGRectMake(20,205,140,82.5);
+            //view8.frame = CGRectMake(110,152,100,35);
+            //view9.frame = CGRectMake(110,187,100,70);
+            //view10.frame = CGRectMake(180,205,140,30);
+            view11.frame = CGRectMake(180,205,140,82.5);
+            //view12.frame = CGRectMake(0,164,160,30);
+            //view13.frame = CGRectMake(0,194,160,52.5);
+            //view14.frame = CGRectMake(20,287.5,140,30);
+            view15.frame = CGRectMake(20,287.5,140,82.5);
+            //view16.frame = CGRectMake(180,287.5,140,30);
+            view17.frame = CGRectMake(180,287.5,140,82.5);
             
-            view2_1.frame = CGRectMake(5,157,77.5,70);
-            view3_1.frame = CGRectMake(82.5,157,77.5,70);
-            view4_1.frame = CGRectMake(160,157,77.5,70);
-            view5_1.frame = CGRectMake(237.5,157,77.5,70);
-            view6_1.frame = CGRectMake(5,232,200,35);
-            view7_1.frame = CGRectMake(5,267,100,70);
+            view2_1.frame = CGRectMake(0,70,20,67.5);
+            view3_1.frame = CGRectMake(160,70,20,67.5);
+            view4_1.frame = CGRectMake(0,137.5,20,67.5);
+            view5_1.frame = CGRectMake(160,137.5,20,67.5);
+            //view6_1.frame = CGRectMake(0,205,20,30);
+            view7_1.frame = CGRectMake(0,205,20,82.5);
             //view8.frame = CGRectMake(105,267,100,70);
             //view9.frame = CGRectMake(210,232,105,35);
-            view10_1.frame = CGRectMake(210,267,105,70);
-            view11_1.frame = CGRectMake(5,342,100,35);
+            //view10_1.frame = CGRectMake(160,267,105,70);
+            view11_1.frame = CGRectMake(160,205,20,82.5);
             //view12.frame = CGRectMake(5,377,100,70);
             //view13.frame = CGRectMake(110,342,100,35);
-            view14_1.frame = CGRectMake(110,377,100,70);
-            view15_1.frame = CGRectMake(215,342,100,35);
-            view16_1.frame = CGRectMake(215,377,100,70);
+            //view14_1.frame = CGRectMake(110,377,100,70);
+            view15_1.frame = CGRectMake(0,287.5,20,82.5);
+            //view16_1.frame = CGRectMake(215,377,100,70);
+            view17_1.frame = CGRectMake(160,287.5,20,82.5);
+
             
             
         } else { // iPhone 3.5inch

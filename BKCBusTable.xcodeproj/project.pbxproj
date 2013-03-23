@@ -32,6 +32,8 @@
 		BE39AAD116F84433008E13F5 /* tTableKST_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD016F84433008E13F5 /* tTableKST_2.plist */; };
 		BE39AAD316F845A5008E13F5 /* tTableSET_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD216F845A5008E13F5 /* tTableSET_1.plist */; };
 		BE39AAD516F8464F008E13F5 /* tTableSET_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */; };
+		BE60905F16FE156D00455556 /* tTableKNG_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE60905E16FE156D00455556 /* tTableKNG_1.plist */; };
+		BE60906116FE161000455556 /* tTableKNG_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE60906016FE160F00455556 /* tTableKNG_2.plist */; };
 		BE88C59B16EBBB34008C6EF4 /* tTableCHU_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */; };
 		BE88C5A316EC494E008C6EF4 /* ToRitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */; };
 		BE88C5AA16EC5FA5008C6EF4 /* tTableCHU_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE88C5A916EC5FA5008C6EF4 /* tTableCHU_2.plist */; };
@@ -137,6 +139,8 @@
 		BE39AAD016F84433008E13F5 /* tTableKST_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKST_2.plist; sourceTree = "<group>"; };
 		BE39AAD216F845A5008E13F5 /* tTableSET_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableSET_1.plist; sourceTree = "<group>"; };
 		BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableSET_2.plist; sourceTree = "<group>"; };
+		BE60905E16FE156D00455556 /* tTableKNG_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKNG_1.plist; sourceTree = "<group>"; };
+		BE60906016FE160F00455556 /* tTableKNG_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKNG_2.plist; sourceTree = "<group>"; };
 		BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableCHU_1.plist; sourceTree = "<group>"; };
 		BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToRitsViewController.h; sourceTree = "<group>"; };
 		BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToRitsViewController.m; sourceTree = "<group>"; };
@@ -350,6 +354,8 @@
 				BE00A6D016E6DC93007097D0 /* ViewController.m */,
 				BE00A78816EB070E007097D0 /* FromRitsViewController.h */,
 				BE00A78916EB070E007097D0 /* FromRitsViewController.m */,
+				BE60905E16FE156D00455556 /* tTableKNG_1.plist */,
+				BE60906016FE160F00455556 /* tTableKNG_2.plist */,
 				BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */,
 				BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */,
 				BE00A77616E86E0E007097D0 /* DateController.h */,
@@ -622,6 +628,8 @@
 				BE39AAD116F84433008E13F5 /* tTableKST_2.plist in Resources */,
 				BE39AAD316F845A5008E13F5 /* tTableSET_1.plist in Resources */,
 				BE39AAD516F8464F008E13F5 /* tTableSET_2.plist in Resources */,
+				BE60905F16FE156D00455556 /* tTableKNG_1.plist in Resources */,
+				BE60906116FE161000455556 /* tTableKNG_2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
