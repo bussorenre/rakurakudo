@@ -38,7 +38,7 @@
 @synthesize keyArr;
 @synthesize key,valueArr,returnedArr,sortedArr;
 @synthesize dictV;
-@synthesize arrayCHU_1,arrayCHU_2,arrayMKS_1,arrayMKS_2,arrayMKG_1,arrayMKG_2,arrayMPN_1,arrayMPN_2,arrayKST_1,arrayKST_2,arraySET_1,arraySET_2,arrayKNG_1,arrayKNG_2;
+@synthesize arrayCHU_1,arrayCHU_2,arrayMKS_1,arrayMKS_2,arrayMKG_1,arrayMKG_2,arrayMPN_1,arrayMPN_2,arrayKST_1,arrayKST_2,arraySET_1,arraySET_2,arrayKNG_1,arrayKNG_2,arrayMTY_1,arrayMTY_2;
 @synthesize dictCHU_1,dictCHU_2;
 @synthesize tArr;
 @synthesize tDict;
@@ -55,6 +55,9 @@
               //南草津（笠山経由）
               arrayMKS_1 = [[[NSMutableArray alloc]init]autorelease];
               arrayMKS_2 = [[[NSMutableArray alloc]init]autorelease];
+              //南草津（直通）
+              arrayMTY_1 = [[[NSMutableArray alloc]init]autorelease];
+              arrayMTY_2 = [[[NSMutableArray alloc]init]autorelease];
               //南草津（かがやき経由）
               arrayMKG_1 = [[[NSMutableArray alloc]init]autorelease];
               arrayMKG_2 = [[[NSMutableArray alloc]init]autorelease];
@@ -110,6 +113,20 @@
               tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
               tArr = [tDict allKeys];
               arrayMKS_2 = [NSMutableArray arrayWithArray:[self sort:tArr]];
+              //南草津行き（直通）
+              tArr = [[[NSArray alloc]init]autorelease];
+              tDict = [[[NSDictionary alloc]init]autorelease];
+              paths = [[NSBundle mainBundle]pathForResource:@"tTableMTY_1" ofType:@"plist"];
+              tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
+              tArr = [tDict allKeys];
+              arrayMTY_1 = [NSMutableArray arrayWithArray:[self sort:tArr]];
+              //南草津（直通）
+              tArr = [[[NSArray alloc]init]autorelease];
+              tDict = [[[NSDictionary alloc]init]autorelease];
+              paths = [[NSBundle mainBundle]pathForResource:@"tTableMTY_2" ofType:@"plist"];
+              tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
+              tArr = [tDict allKeys];
+              arrayMTY_2 = [NSMutableArray arrayWithArray:[self sort:tArr]];
               //南草津行き（かがやき経由）
               tArr = [[[NSArray alloc]init]autorelease];
               tDict = [[[NSDictionary alloc]init]autorelease];
@@ -180,6 +197,7 @@
               tDict = [NSDictionary dictionaryWithContentsOfFile:paths];
               tArr = [tDict allKeys];
               arrayKNG_2 = [NSMutableArray arrayWithArray:[self sort:tArr]];
+              
 
               
                          
@@ -249,14 +267,20 @@
 
     
 }
--(NSMutableArray *)returnArrToBusTable{
+-(NSMutableArray *)returnArrToBusTable:(int)i{
     
     
     //全てのプロパティリストをまとめる
     arrForTable = [[[NSMutableArray alloc]init]autorelease];
     arrForValue = [[[NSMutableArray alloc]init]autorelease];
     arrForColor = [[[NSMutableArray alloc]init]autorelease];
-    NSArray *arr = [[NSArray alloc]initWithObjects:self.arrayMKS_1,self.arrayMKG_1,self.arrayMPN_1,self.arrayKST_1,self.arraySET_1,self.arrayCHU_1,self.arrayKNG_1, nil];
+    NSArray *arr = [[[NSArray alloc]init]autorelease];
+    if(i == 1){
+        arr = [NSArray arrayWithObjects:self.arrayMKS_1,self.arrayMTY_1,self.arrayMKG_1,self.arrayMPN_1,self.arrayKST_1,self.arraySET_1,self.arrayCHU_1,self.arrayKNG_1, nil];
+    }else{
+            arr = [NSArray arrayWithObjects:self.arrayMKS_2,self.arrayMTY_2,self.arrayMKG_2,self.arrayMPN_2,self.arrayKST_2,self.arraySET_2,self.arrayCHU_2,self.arrayKNG_2, nil];
+   
+    }
     for(int i = 0;i<[arr count];i++){
         for(int j  = 0;j<[[arr objectAtIndex:i] count];j++){
             [arrForTable addObject:[[arr objectAtIndex:i] objectAtIndex:j]];
@@ -264,32 +288,33 @@
                 [arrForValue addObject:@"南草津（笠山経由）"];
                 [arrForColor addObject:[NSNumber numberWithInt:0]];
             }
-            //else if(i == 1){//南草津（直行）
-              //  [arrForValue addObject:@"南草津（直行)"];
-            //}
-            else if(i == 1){//南草津（かがやき経由）
-                [arrForValue addObject:@"南草津（かがやき経由）"];
+            else if(i == 1){//南草津（直行）
+                [arrForValue addObject:@"南草津（直行)"];
                 [arrForColor addObject:[NSNumber numberWithInt:1]];
             }
-            else if(i == 2){//南草津（パナ）
-                [arrForValue addObject:@"南草津（パナ）"];
+            else if(i == 2){//南草津（かがやき経由）
+                [arrForValue addObject:@"南草津（かがやき経由）"];
                 [arrForColor addObject:[NSNumber numberWithInt:2]];
             }
-            else if(i == 3){//草津
-                [arrForValue addObject:@"草津"];
+            else if(i == 3){//南草津（パナ）
+                [arrForValue addObject:@"南草津（パナソニック東口経由）"];
                 [arrForColor addObject:[NSNumber numberWithInt:3]];
             }
-            else if(i == 4){//瀬田
-                [arrForValue addObject:@"瀬田"];
+            else if(i == 4){//草津
+                [arrForValue addObject:@"草津"];
                 [arrForColor addObject:[NSNumber numberWithInt:4]];
             }
-            else if(i == 5){//衣笠
-                [arrForValue addObject:@"中書島"];
+            else if(i == 5){//瀬田
+                [arrForValue addObject:@"瀬田"];
                 [arrForColor addObject:[NSNumber numberWithInt:5]];
             }
-            else if(i == 6){//中書島
-                [arrForValue addObject:@"衣笠"];
+            else if(i == 6){//衣笠
+                [arrForValue addObject:@"中書島"];
                 [arrForColor addObject:[NSNumber numberWithInt:6]];
+            }
+            else if(i == 7){//中書島
+                [arrForValue addObject:@"衣笠"];
+                [arrForColor addObject:[NSNumber numberWithInt:7]];
             }
         }
         [self sortForTable];
@@ -380,16 +405,34 @@
                     remStr2 = @"";
                 }
             }
-            break;/*
+            break;
         case 2://南草津（直行）
-            int min = 0;
-            for(int i = 0;i<[配列 count];i++){
-                if(date < [[配列 objectAtIndex:i] intValue]){
-                    min = [[配列 objectAtIndex:i] intValue] - date;
+            for(int i = 0;i<[arrayMTY_1 count];i++){
+                temp = [[arrayMTY_1 objectAtIndex:i] intValue];
+                if( date < temp){
+                    min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
+                    minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
+                    if(i+1 < [arrayMTY_1 count]) {
+                        temp2 = [[arrayMTY_1 objectAtIndex:i+1] intValue];
+                        minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
+                        num = (((temp2/100)*60) + (temp2%100)) - (((date/100)*60) + (date%100));
+                        remStr2 = [NSString stringWithFormat:@"(あと%3d分)",num];
+                        num2 = [NSNumber numberWithInt:num];
+                    }else{
+                        minStr2 = [NSString stringWithFormat:@""];
+                        remStr2 = @"";
+                    }
                     break;
-                }else {}
+                }else {
+                    //終了
+                    minStr = [NSString stringWithFormat:@"本日は終了しました"];
+                    remStr1 = @"";
+                    minStr2 = [NSString stringWithFormat:@""];
+                    remStr2 = @"";
+                }
             }
-            break;*/
+            break;
         case 3://南草津（かがやき）
             for(int i = 0;i<[arrayMKG_1 count];i++){
                 temp = [[arrayMKG_1 objectAtIndex:i] intValue];
@@ -577,13 +620,13 @@
                 temp = [[arrayMKS_2 objectAtIndex:i] intValue];
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
-                    minStr = [NSString stringWithFormat:@"① %02d:%02d 出発",temp/100,temp%100];
-                    remStr1 = [NSString stringWithFormat:@"(あと%3d分)",min];
+                    minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
                     if(i+1 < [arrayMKS_2 count]) {
                         temp2 = [[arrayMKS_2 objectAtIndex:i+1] intValue];
-                        minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
+                        minStr2 = [NSString stringWithFormat:@"分 (%02d:%02d)",temp2/100,temp2%100];
                         num = (((temp2/100)*60) + (temp2%100)) - (((date/100)*60) + (date%100));
-                        remStr2 = [NSString stringWithFormat:@"(あと%3d分)",num];
+                        remStr2 = [NSString stringWithFormat:@"%3d",num];
                         num2 = [NSNumber numberWithInt:num];
                     }else{
                         minStr2 = [NSString stringWithFormat:@""];
@@ -598,28 +641,46 @@
                     remStr2 = @"";
                 }
             }
-            break;/*
-                   case 2://南草津（直行）
-                   int min = 0;
-                   for(int i = 0;i<[配列 count];i++){
-                   if(date < [[配列 objectAtIndex:i] intValue]){
-                   min = [[配列 objectAtIndex:i] intValue] - date;
-                   break;
-                   }else {}
+            break;
+                case 12://南草津（直行）
+                   for(int i = 0;i<[arrayMTY_2 count];i++){
+                   temp = [[arrayMTY_2 objectAtIndex:i] intValue];
+                   if( date < temp){
+                   min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
+                   minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                   remStr1 = [NSString stringWithFormat:@"%3d",min];
+                   if(i+1 < [arrayMTY_2 count]) {
+                   temp2 = [[arrayMTY_2 objectAtIndex:i+1] intValue];
+                   minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
+                   num = (((temp2/100)*60) + (temp2%100)) - (((date/100)*60) + (date%100));
+                   remStr2 = [NSString stringWithFormat:@"(あと%3d分)",num];
+                   num2 = [NSNumber numberWithInt:num];
+                   }else{
+                   minStr2 = [NSString stringWithFormat:@""];
+                   remStr2 = @"";
                    }
-                   break;*/
+                   break;
+                   }else {
+                   //終了
+                   minStr = [NSString stringWithFormat:@"本日は終了しました"];
+                   remStr1 = @"";
+                   minStr2 = [NSString stringWithFormat:@""];
+                   remStr2 = @"";
+                   }
+                   }
+                   break;
         case 13://南草津（かがやき）
             for(int i = 0;i<[arrayMKG_2 count];i++){
                 temp = [[arrayMKG_2 objectAtIndex:i] intValue];
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
-                    minStr = [NSString stringWithFormat:@"① %02d:%02d 出発",temp/100,temp%100];
-                    remStr1 = [NSString stringWithFormat:@"(あと%3d分)",min];
+                    minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
                     if(i+1 < [arrayMKG_2 count]) {
                         temp2 = [[arrayMKG_2 objectAtIndex:i+1] intValue];
-                        minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
+                        minStr2 = [NSString stringWithFormat:@"分 (%02d:%02d)",temp2/100,temp2%100];
                         num = (((temp2/100)*60) + (temp2%100)) - (((date/100)*60) + (date%100));
-                        remStr2 = [NSString stringWithFormat:@"(あと%3d分)",num];
+                        remStr2 = [NSString stringWithFormat:@"%3d",num];
                         num2 = [NSNumber numberWithInt:num];
                     }else{
                         minStr2 = [NSString stringWithFormat:@""];
@@ -640,8 +701,8 @@
                 temp = [[arrayMPN_2 objectAtIndex:i] intValue];
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
-                    minStr = [NSString stringWithFormat:@"① %02d:%02d 出発",temp/100,temp%100];
-                    remStr1 = [NSString stringWithFormat:@"(あと%3d分)",min];
+                    minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
                     if(i+1 < [arrayMPN_2 count]) {
                         temp2 = [[arrayMPN_2 objectAtIndex:i+1] intValue];
                         minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
@@ -667,8 +728,8 @@
                 temp = [[arrayKST_2 objectAtIndex:i] intValue];
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
-                    minStr = [NSString stringWithFormat:@"① %02d:%02d 出発",temp/100,temp%100];
-                    remStr1 = [NSString stringWithFormat:@"(あと%3d分)",min];
+                    minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
                     if(i+1 < [arrayKST_2 count]) {
                         temp2 = [[arrayKST_2 objectAtIndex:i+1] intValue];
                         minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
@@ -704,8 +765,8 @@
                 temp = [[arrayKST_2 objectAtIndex:i] intValue];
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
-                    minStr = [NSString stringWithFormat:@"① %02d:%02d 出発",temp/100,temp%100];
-                    remStr1 = [NSString stringWithFormat:@"(あと%3d分)",min];
+                    minStr = [NSString stringWithFormat:@"分 %02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
                     if(i+1 < [arrayKST_2 count]) {
                         temp2 = [[arrayKST_2 objectAtIndex:i+1] intValue];
                         minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
@@ -735,23 +796,41 @@
              break;
              }else {}
              }
-             break;
-             case 9://長寿社会福祉センター
-             int min = 0;
-             for(int i = 0;i<[配列 count];i++){
-             if(date < [[配列 objectAtIndex:i] intValue]){
-             min = [[配列 objectAtIndex:i] intValue] - date;
-             break;
-             }else {}
-             }
              break;*/
-        case 20://中書島
+             case 19://衣笠
+             for(int i = 0;i<[arrayKNG_2 count];i++){
+             temp = [[arrayKNG_2 objectAtIndex:i] intValue];
+             if( date < temp){
+             min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
+             minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+             remStr1 = [NSString stringWithFormat:@"%3d",min];
+             if(i+1 < [arrayKNG_2 count]) {
+             temp2 = [[arrayKNG_2 objectAtIndex:i+1] intValue];
+             minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];
+             num = (((temp2/100)*60) + (temp2%100)) - (((date/100)*60) + (date%100));
+             remStr2 = [NSString stringWithFormat:@"(あと%3d分)",num];
+             num2 = [NSNumber numberWithInt:num];
+             }else{
+             minStr2 = [NSString stringWithFormat:@""];
+             remStr2 = @"";
+             }
+             break;
+             }else {
+             //終了
+             minStr = [NSString stringWithFormat:@"本日は終了しました"];
+             remStr1 = @"";
+             minStr2 = [NSString stringWithFormat:@""];
+             remStr2 = @"";
+             }
+             }
+             break;
+             case 20://中書島
             for(int i = 0;i<[arrayCHU_2 count];i++){
                 temp = [[arrayCHU_2 objectAtIndex:i] intValue];
                 if( date < temp){
                     min = (((temp/100)*60) + (temp%100)) - (((date/100)*60) + (date%100));
-                    minStr = [NSString stringWithFormat:@"① %02d:%02d 出発",temp/100,temp%100];
-                    remStr1 = [NSString stringWithFormat:@"(あと%3d分)",min];
+                    minStr = [NSString stringWithFormat:@"分 (%02d:%02d)",temp/100,temp%100];
+                    remStr1 = [NSString stringWithFormat:@"%3d",min];
                     if(i+1 < [arrayCHU_2 count]) {
                         temp2 = [[arrayCHU_2 objectAtIndex:i+1] intValue];
                         minStr2 = [NSString stringWithFormat:@"② %02d:%02d 出発",temp2/100,temp2%100];

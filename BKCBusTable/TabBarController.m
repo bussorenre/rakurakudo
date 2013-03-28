@@ -13,7 +13,7 @@
 @end
 
 @implementation TabBarController
-@synthesize tbi1,tbi2,tbi3;
+@synthesize tbi1,tbi2,tbi3,tbi4;
 @synthesize navi;
 -(id)init{
     self = [super init];

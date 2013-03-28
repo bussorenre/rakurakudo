@@ -23,7 +23,6 @@
 		BE00A6DB16E6DC93007097D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE00A6B616E6DC93007097D0 /* Foundation.framework */; };
 		BE00A6E316E6DC93007097D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE00A6E116E6DC93007097D0 /* InfoPlist.strings */; };
 		BE00A6E616E6DC93007097D0 /* BKCBusTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A6E516E6DC93007097D0 /* BKCBusTableTests.m */; };
-		BE00A6F116E6E0E6007097D0 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A6F016E6E0E6007097D0 /* BusViewController.m */; };
 		BE00A70616E6FF72007097D0 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A70516E6FF72007097D0 /* TabBarController.m */; };
 		BE00A77816E86E0E007097D0 /* DateController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE00A77716E86E0E007097D0 /* DateController.m */; };
 		BE00A77F16E8A833007097D0 /* TimeTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE00A77E16E8A833007097D0 /* TimeTable.plist */; };
@@ -34,6 +33,13 @@
 		BE39AAD516F8464F008E13F5 /* tTableSET_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */; };
 		BE60905F16FE156D00455556 /* tTableKNG_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE60905E16FE156D00455556 /* tTableKNG_1.plist */; };
 		BE60906116FE161000455556 /* tTableKNG_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE60906016FE160F00455556 /* tTableKNG_2.plist */; };
+		BE60906416FE319D00455556 /* BusTable2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60906316FE319D00455556 /* BusTable2ViewController.m */; };
+		BE60906616FEEA1A00455556 /* tTableMTY_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE60906516FEEA1A00455556 /* tTableMTY_2.plist */; };
+		BE60906816FEEF0500455556 /* tTableMTY_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE60906716FEEF0500455556 /* tTableMTY_1.plist */; };
+		BE60906A16FF488E00455556 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60906916FF488E00455556 /* icon114x114.png */; };
+		BE60906C16FF489200455556 /* icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60906B16FF489200455556 /* icon57x57.png */; };
+		BE60906F16FF4E2700455556 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60906E16FF4E2700455556 /* BusViewController.m */; };
+		BE60907016FF4E2700455556 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60906E16FF4E2700455556 /* BusViewController.m */; };
 		BE88C59B16EBBB34008C6EF4 /* tTableCHU_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */; };
 		BE88C5A316EC494E008C6EF4 /* ToRitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */; };
 		BE88C5AA16EC5FA5008C6EF4 /* tTableCHU_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE88C5A916EC5FA5008C6EF4 /* tTableCHU_2.plist */; };
@@ -126,8 +132,6 @@
 		BE00A6E216E6DC93007097D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE00A6E416E6DC93007097D0 /* BKCBusTableTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKCBusTableTests.h; sourceTree = "<group>"; };
 		BE00A6E516E6DC93007097D0 /* BKCBusTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKCBusTableTests.m; sourceTree = "<group>"; };
-		BE00A6EF16E6E0E6007097D0 /* BusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusViewController.h; sourceTree = "<group>"; };
-		BE00A6F016E6E0E6007097D0 /* BusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusViewController.m; sourceTree = "<group>"; };
 		BE00A70416E6FF72007097D0 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		BE00A70516E6FF72007097D0 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		BE00A77616E86E0E007097D0 /* DateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateController.h; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 		BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableSET_2.plist; sourceTree = "<group>"; };
 		BE60905E16FE156D00455556 /* tTableKNG_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKNG_1.plist; sourceTree = "<group>"; };
 		BE60906016FE160F00455556 /* tTableKNG_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableKNG_2.plist; sourceTree = "<group>"; };
+		BE60906216FE319D00455556 /* BusTable2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusTable2ViewController.h; sourceTree = "<group>"; };
+		BE60906316FE319D00455556 /* BusTable2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusTable2ViewController.m; sourceTree = "<group>"; };
+		BE60906516FEEA1A00455556 /* tTableMTY_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMTY_2.plist; sourceTree = "<group>"; };
+		BE60906716FEEF0500455556 /* tTableMTY_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMTY_1.plist; sourceTree = "<group>"; };
+		BE60906916FF488E00455556 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114x114.png; sourceTree = "<group>"; };
+		BE60906B16FF489200455556 /* icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57x57.png; sourceTree = "<group>"; };
+		BE60906D16FF4E1F00455556 /* BusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusViewController.h; path = BKCBusTable/BusViewController.h; sourceTree = "<group>"; };
+		BE60906E16FF4E2700455556 /* BusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusViewController.m; path = BKCBusTable/BusViewController.m; sourceTree = "<group>"; };
 		BE88C59A16EBBB34008C6EF4 /* tTableCHU_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableCHU_1.plist; sourceTree = "<group>"; };
 		BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToRitsViewController.h; sourceTree = "<group>"; };
 		BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToRitsViewController.m; sourceTree = "<group>"; };
@@ -288,6 +300,8 @@
 		BE00A6A516E6DC93007097D0 = {
 			isa = PBXGroup;
 			children = (
+				BE60906B16FF489200455556 /* icon57x57.png */,
+				BE60906916FF488E00455556 /* icon114x114.png */,
 				BE8C5E0B16F4E1D40068C5FA /* AdWhirl */,
 				BE8C5E3C16F4E1D40068C5FA /* GADAdMobExtras.h */,
 				BE8C5E3D16F4E1D40068C5FA /* GADAdNetworkExtras.h */,
@@ -304,6 +318,8 @@
 				BE8C5E0216F4E18F0068C5FA /* NextBusTableViewController.m */,
 				BE8C5E0316F4E18F0068C5FA /* testViewController.h */,
 				BE8C5E0416F4E18F0068C5FA /* testViewController.m */,
+				BE60906E16FF4E2700455556 /* BusViewController.m */,
+				BE60906D16FF4E1F00455556 /* BusViewController.h */,
 				BE88C81D16EE044B008C6EF4 /* AdSupport.framework */,
 				BE88C81B16EE0443008C6EF4 /* StoreKit.framework */,
 				BE88C6EB16EDE930008C6EF4 /* MessageUI.framework */,
@@ -354,20 +370,22 @@
 				BE00A6D016E6DC93007097D0 /* ViewController.m */,
 				BE00A78816EB070E007097D0 /* FromRitsViewController.h */,
 				BE00A78916EB070E007097D0 /* FromRitsViewController.m */,
+				BE60906716FEEF0500455556 /* tTableMTY_1.plist */,
+				BE60906516FEEA1A00455556 /* tTableMTY_2.plist */,
 				BE60905E16FE156D00455556 /* tTableKNG_1.plist */,
 				BE60906016FE160F00455556 /* tTableKNG_2.plist */,
 				BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */,
 				BE88C5A216EC494E008C6EF4 /* ToRitsViewController.m */,
 				BE00A77616E86E0E007097D0 /* DateController.h */,
 				BE00A77716E86E0E007097D0 /* DateController.m */,
+				BE60906216FE319D00455556 /* BusTable2ViewController.h */,
+				BE60906316FE319D00455556 /* BusTable2ViewController.m */,
 				BE39AACD16F84281008E13F5 /* tTableKST_1.plist */,
 				BE39AAD016F84433008E13F5 /* tTableKST_2.plist */,
 				BE39AAD216F845A5008E13F5 /* tTableSET_1.plist */,
 				BE39AAD416F8464F008E13F5 /* tTableSET_2.plist */,
 				BE9D544D16FA0175008E4090 /* BusTabelViewController.h */,
 				BE9D544E16FA0175008E4090 /* BusTabelViewController.m */,
-				BE00A6EF16E6E0E6007097D0 /* BusViewController.h */,
-				BE00A6F016E6E0E6007097D0 /* BusViewController.m */,
 				BE8C5E7D16F5EDAB0068C5FA /* tTableMPN_1.plist */,
 				BE8C5E7F16F5F08A0068C5FA /* tTableMPN_2.plist */,
 				BE8C5E8116F5F35E0068C5FA /* tTableMKG_1.plist */,
@@ -630,6 +648,10 @@
 				BE39AAD516F8464F008E13F5 /* tTableSET_2.plist in Resources */,
 				BE60905F16FE156D00455556 /* tTableKNG_1.plist in Resources */,
 				BE60906116FE161000455556 /* tTableKNG_2.plist in Resources */,
+				BE60906616FEEA1A00455556 /* tTableMTY_2.plist in Resources */,
+				BE60906816FEEF0500455556 /* tTableMTY_1.plist in Resources */,
+				BE60906A16FF488E00455556 /* icon114x114.png in Resources */,
+				BE60906C16FF489200455556 /* icon57x57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +689,6 @@
 				BE00A6C116E6DC93007097D0 /* main.m in Sources */,
 				BE00A6C516E6DC93007097D0 /* AppDelegate.m in Sources */,
 				BE00A6D116E6DC93007097D0 /* ViewController.m in Sources */,
-				BE00A6F116E6E0E6007097D0 /* BusViewController.m in Sources */,
 				BE00A70616E6FF72007097D0 /* TabBarController.m in Sources */,
 				BE00A77816E86E0E007097D0 /* DateController.m in Sources */,
 				BE00A78A16EB070F007097D0 /* FromRitsViewController.m in Sources */,
@@ -705,6 +726,8 @@
 				BE8C5E7B16F4E1D40068C5FA /* CJSONSerializer.m in Sources */,
 				BE8C5E7C16F4E1D40068C5FA /* CSerializedJSONData.m in Sources */,
 				BE9D544F16FA0175008E4090 /* BusTabelViewController.m in Sources */,
+				BE60906416FE319D00455556 /* BusTable2ViewController.m in Sources */,
+				BE60906F16FF4E2700455556 /* BusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE00A6E616E6DC93007097D0 /* BKCBusTableTests.m in Sources */,
+				BE60907016FF4E2700455556 /* BusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +786,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: daisuke sato";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -775,8 +800,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "D6F73861-6BDA-4808-9A2D-8D749441A1F5";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -790,15 +816,17 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: daisuke sato";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "D6F73861-6BDA-4808-9A2D-8D749441A1F5";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
@@ -822,6 +850,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
@@ -844,6 +873,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};

@@ -51,7 +51,7 @@
         arrForAll = [[[NSMutableArray alloc]initWithArray:[self.dateController sort:allArr]]autorelease];
         countForSec = [NSNumber numberWithInt:[arrForAll count]];
         NSLog(@"%d",[arrForAll count]);*/
-        UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0,40,320,330)];
+        UIView *view1 = [[[UIView alloc]initWithFrame:CGRectMake(0,40,320,330)]autorelease];
 
         table = [[UITableView alloc]initWithFrame:CGRectMake(0,0,320,330) style:UITableViewStylePlain];
         table.delegate = self;

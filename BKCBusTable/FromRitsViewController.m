@@ -39,9 +39,6 @@ label17,label17_2,label17_3,label17_4;
     self = [super init];
     if(self){
         
-            int num = 0;
-        int n = 0;
-        
         view1 = [[UIView alloc]init];
         view2 = [[UIView alloc]init];
         view3 = [[UIView alloc]init];
@@ -79,80 +76,84 @@ label17,label17_2,label17_3,label17_4;
         if (frame.size.height > 500.0) { // iPhone 4inch (568 - 20 px)
             NSLog(@"in height = 548");
             
+            
+            
             // iPhone5 のときの処理
-            view1.frame = CGRectMake(0,40,320,165);
-            view2.frame = CGRectMake(0,90,160,47.5);
-            view3.frame = CGRectMake(180,70,140,67.5);
-            view4.frame = CGRectMake(20,137.5,140,67.5);
-            view5.frame = CGRectMake(180,137.5,140,67.5);
+            view1.frame = CGRectMake(0,0,320,40);
+            view2.frame = CGRectMake(0,70,160,65);
+            view3.frame = CGRectMake(160,70,160,65);
+            view4.frame = CGRectMake(0,165,160,65);
+            view5.frame = CGRectMake(160,165,160,65);
             //view6.frame = CGRectMake(20,205,140,30);
-            view7.frame = CGRectMake(20,205,140,82.5);
+            view7.frame = CGRectMake(0,260,160,62.5);
             //view8.frame = CGRectMake(110,152,100,35);
             //view9.frame = CGRectMake(110,187,100,70);
             //view10.frame = CGRectMake(180,205,140,30);
-            view11.frame = CGRectMake(180,205,140,82.5);
+            view11.frame = CGRectMake(160,260,160,62.5);
             //view12.frame = CGRectMake(0,164,160,30);
             //view13.frame = CGRectMake(0,194,160,52.5);
             //view14.frame = CGRectMake(20,287.5,140,30);
-            view15.frame = CGRectMake(20,287.5,140,82.5);
+            view15.frame = CGRectMake(0,357.5,160,62.5);
             //view16.frame = CGRectMake(180,287.5,140,30);
-            view17.frame = CGRectMake(180,287.5,140,82.5);
+            view17.frame = CGRectMake(160,357.5,160,62.5);
             
-            view2_1.frame = CGRectMake(0,70,20,67.5);
-            view3_1.frame = CGRectMake(160,70,20,67.5);
-            view4_1.frame = CGRectMake(0,137.5,20,67.5);
-            view5_1.frame = CGRectMake(160,137.5,20,67.5);
+            view2_1.frame = CGRectMake(0,40,160,30);
+            view3_1.frame = CGRectMake(160,40,160,30);
+            view4_1.frame = CGRectMake(0,135,160,30);
+            view5_1.frame = CGRectMake(160,135,160,30);
             //view6_1.frame = CGRectMake(0,205,20,30);
-            view7_1.frame = CGRectMake(0,205,20,82.5);
+            view7_1.frame = CGRectMake(0,225,160,35);
             //view8.frame = CGRectMake(105,267,100,70);
             //view9.frame = CGRectMake(210,232,105,35);
             //view10_1.frame = CGRectMake(160,267,105,70);
-            view11_1.frame = CGRectMake(160,205,20,82.5);
+            view11_1.frame = CGRectMake(160,225,160,35);
             //view12.frame = CGRectMake(5,377,100,70);
             //view13.frame = CGRectMake(110,342,100,35);
             //view14_1.frame = CGRectMake(110,377,100,70);
-            view15_1.frame = CGRectMake(0,287.5,20,82.5);
+            view15_1.frame = CGRectMake(0,322.5,160,35);
             //view16_1.frame = CGRectMake(215,377,100,70);
-            view17_1.frame = CGRectMake(160,287.5,20,82.5);
-            
+            view17_1.frame = CGRectMake(160,322.5,160,35);
+                        
             
         } else { // iPhone 3.5inch
             
             // iPhone5より前のモデル のときの処理
-            view1.frame = CGRectMake(0,40,320,165);
-            view2.frame = CGRectMake(0,90,160,47.5);
-            view3.frame = CGRectMake(160,90,160,47.5);
-            view4.frame = CGRectMake(0,157.5,160,47.5);
-            view5.frame = CGRectMake(160,157.5,160,47.5);
+            view1.frame = CGRectMake(0,0,320,165);
+            view2.frame = CGRectMake(0,50,160,47.5);
+            view3.frame = CGRectMake(160,50,160,47.5);
+            view4.frame = CGRectMake(0,117.5,160,47.5);
+            view5.frame = CGRectMake(160,117.5,160,47.5);
             //view6.frame = CGRectMake(20,205,140,30);
-            view7.frame = CGRectMake(0,235,160,52.5);
+            view7.frame = CGRectMake(0,195,160,52.5);
             //view8.frame = CGRectMake(110,152,100,35);
             //view9.frame = CGRectMake(110,187,100,70);
             //view10.frame = CGRectMake(180,205,140,30);
-            view11.frame = CGRectMake(160,235,160,52.5);
+            view11.frame = CGRectMake(160,195,160,52.5);
             //view12.frame = CGRectMake(0,164,160,30);
             //view13.frame = CGRectMake(0,194,160,52.5);
             //view14.frame = CGRectMake(20,287.5,140,30);
-            view15.frame = CGRectMake(0,317.5,160,52.5);
+            view15.frame = CGRectMake(0,277.5,160,52.5);
             //view16.frame = CGRectMake(180,287.5,140,30);
-            view17.frame = CGRectMake(160,317.5,160,52.5);
+            view17.frame = CGRectMake(160,277.5,160,52.5);
             
-            view2_1.frame = CGRectMake(0,70,160,20);
-            view3_1.frame = CGRectMake(160,70,160,20);
-            view4_1.frame = CGRectMake(0,137.5,160,20);
-            view5_1.frame = CGRectMake(160,137.5,160,20);
+            view2_1.frame = CGRectMake(0,30,160,20);
+            view3_1.frame = CGRectMake(160,30,160,20);
+            view4_1.frame = CGRectMake(0,97.5,160,20);
+            view5_1.frame = CGRectMake(160,97.5,160,20);
             //view6_1.frame = CGRectMake(0,205,20,30);
-            view7_1.frame = CGRectMake(0,205,160,30);
+            view7_1.frame = CGRectMake(0,165,160,30);
             //view8.frame = CGRectMake(105,267,100,70);
             //view9.frame = CGRectMake(210,232,105,35);
             //view10_1.frame = CGRectMake(160,267,105,70);
-            view11_1.frame = CGRectMake(160,205,160,30);
+            view11_1.frame = CGRectMake(160,165,160,30);
             //view12.frame = CGRectMake(5,377,100,70);
             //view13.frame = CGRectMake(110,342,100,35);
             //view14_1.frame = CGRectMake(110,377,100,70);
-            view15_1.frame = CGRectMake(0,287.5,160,30);
+            view15_1.frame = CGRectMake(0,247.5,160,30);
             //view16_1.frame = CGRectMake(215,377,100,70);
-            view17_1.frame = CGRectMake(160,287.5,160,30);
+            view17_1.frame = CGRectMake(160,247.5,160,30);
+            
+            
         }
         
         
@@ -172,19 +173,19 @@ label17,label17_2,label17_3,label17_4;
         view2.backgroundColor = RGB(224, 255, 255);
         
         //ラベル「あと」
-        UILabel *lbl2_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,25,15)];
+        UILabel *lbl2_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,10,25,15)];
         lbl2_0.text = @"あと";
         lbl2_0.font  = [UIFont fontWithName:@"Marker Felt" size:12];
         lbl2_0.backgroundColor = [UIColor clearColor];
         [self.view2 addSubview:lbl2_0];
         //ラベル「分(00:00)」
-        label2 = [[UILabel alloc]initWithFrame:CGRectMake(0,20,155,20)];
+        label2 = [[UILabel alloc]initWithFrame:CGRectMake(0,25,155,20)];
         label2.font = [UIFont fontWithName:@"Marker Felt" size:15];
         label2.backgroundColor = [UIColor clearColor];
         label2.textAlignment = NSTextAlignmentRight;
         [self.view2 addSubview:label2];
         //ラベル「00」
-        label2_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,3,90,40)];
+        label2_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,8,90,40)];
         label2_2.backgroundColor = [UIColor clearColor];
         label2_2.font = [UIFont fontWithName:@"Marker Felt" size:35];
         label2_2.textAlignment = NSTextAlignmentRight;
@@ -219,19 +220,19 @@ label17,label17_2,label17_3,label17_4;
         view3.backgroundColor = RGB(224, 255, 255);
         
         //ラベル「あと」
-        UILabel *lbl3_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,25,15)];
+        UILabel *lbl3_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,10,25,15)];
         lbl3_0.text = @"あと";
         lbl3_0.font  = [UIFont fontWithName:@"Marker Felt" size:12];
         lbl3_0.backgroundColor = [UIColor clearColor];
         [self.view3 addSubview:lbl3_0];
         //ラベル「分(00:00)」
-        label3 = [[UILabel alloc]initWithFrame:CGRectMake(0,20,155,20)];
+        label3 = [[UILabel alloc]initWithFrame:CGRectMake(0,25,155,20)];
         label3.font = [UIFont fontWithName:@"Marker Felt" size:15];
         label3.backgroundColor = [UIColor clearColor];
         label3.textAlignment = NSTextAlignmentRight;
         [self.view3 addSubview:label3];
         //ラベル「00」
-        label3_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,3,90,40)];
+        label3_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,8,90,40)];
         label3_2.backgroundColor = [UIColor clearColor];
         label3_2.font = [UIFont fontWithName:@"Marker Felt" size:35];
         label3_2.textAlignment = NSTextAlignmentRight;
@@ -255,19 +256,19 @@ label17,label17_2,label17_3,label17_4;
         view4.backgroundColor = RGB(224, 255, 255);
         
         //ラベル「あと」
-        UILabel *lbl4_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,25,15)];
+        UILabel *lbl4_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,10,25,15)];
         lbl4_0.text = @"あと";
         lbl4_0.font  = [UIFont fontWithName:@"Marker Felt" size:12];
         lbl4_0.backgroundColor = [UIColor clearColor];
         [self.view4 addSubview:lbl4_0];
         //ラベル「分(00:00)」
-        label4 = [[UILabel alloc]initWithFrame:CGRectMake(0,20,155,20)];
+        label4 = [[UILabel alloc]initWithFrame:CGRectMake(0,25,155,20)];
         label4.font = [UIFont fontWithName:@"Marker Felt" size:15];
         label4.backgroundColor = [UIColor clearColor];
         label4.textAlignment = NSTextAlignmentRight;
         [self.view4 addSubview:label4];
         //ラベル「00」
-        label4_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,3,90,40)];
+        label4_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,8,90,40)];
         label4_2.backgroundColor = [UIColor clearColor];
         label4_2.font = [UIFont fontWithName:@"Marker Felt" size:35];
         label4_2.textAlignment = NSTextAlignmentRight;
@@ -319,19 +320,19 @@ label17,label17_2,label17_3,label17_4;
         view5.backgroundColor = RGB(224, 255, 255);
         
         //ラベル「あと」
-        UILabel *lbl5_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,5,25,15)];
+        UILabel *lbl5_0 = [[UILabel alloc]initWithFrame:CGRectMake(5,10,25,15)];
         lbl5_0.text = @"あと";
         lbl5_0.font  = [UIFont fontWithName:@"Marker Felt" size:12];
         lbl5_0.backgroundColor = [UIColor clearColor];
         [self.view5 addSubview:lbl5_0];
         //ラベル「分(00:00)」
-        label5 = [[UILabel alloc]initWithFrame:CGRectMake(0,20,155,20)];
+        label5 = [[UILabel alloc]initWithFrame:CGRectMake(0,25,155,20)];
         label5.font = [UIFont fontWithName:@"Marker Felt" size:15];
         label5.backgroundColor = [UIColor clearColor];
         label5.textAlignment = NSTextAlignmentRight;
         [self.view5 addSubview:label5];
         //ラベル「00」
-        label5_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,3,90,40)];
+        label5_2 = [[UILabel alloc]initWithFrame:CGRectMake(0,8,90,40)];
         label5_2.backgroundColor = [UIColor clearColor];
         label5_2.font = [UIFont fontWithName:@"Marker Felt" size:35];
         label5_2.textAlignment = NSTextAlignmentRight;
@@ -378,15 +379,6 @@ label17,label17_2,label17_3,label17_4;
         [self.view addSubview:view5_1];
         
         //add now 2013/3/17 below
-        
-        view6.backgroundColor = RGB(127,255,212);
-        UILabel *label6 = [[UILabel alloc]initWithFrame:CGRectMake(30,10,80,20)];
-        label6.backgroundColor = [UIColor clearColor];
-        label6.text = @"草津";
-        label6.font = [UIFont fontWithName:@"Marker Felt" size:20];
-        [self.view addSubview:view6];
-        [self.view6 addSubview:label6];
-        
         /*----草津----*/
         view7.backgroundColor = RGB(193, 255, 193);
         
@@ -674,15 +666,6 @@ label17,label17_2,label17_3,label17_4;
         lbl15_1.text = @"衣笠";
         [self.view15_1 addSubview:lbl15_1];
         [self.view addSubview:view15_1];
-        
-        view16.backgroundColor = RGB(255,165,79);
-        //UILabel *label7 = [[UILabel alloc]initWithFrame:CGRectMake(225,250,90,20)];
-        UILabel *label16 = [[UILabel alloc]initWithFrame:CGRectMake(20,10,80,25)];
-        label16.font = [UIFont fontWithName:@"Marker Felt" size:20];
-        label16.backgroundColor = [UIColor clearColor];
-        label16.text = @"中書島";
-        [self.view addSubview:view16];
-        [self.view16 addSubview:label16];
         
         /*----中書島----*/
         view17.backgroundColor = RGB(255, 187, 255);
