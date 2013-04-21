@@ -2,77 +2,107 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>815</key>
+	<key>805</key>
+	<string>3</string>
+	<key>910</key>
 	<string>3</string>
 	<key>925</key>
+	<string>3</string>
+	<key>940</key>
+	<string>3</string>
+	<key>955</key>
+	<string>3</string>
+	<key>1010</key>
 	<string>3</string>
 	<key>1015</key>
 	<string>3</string>
 	<key>1035</key>
 	<string>3</string>
+	<key>1045</key>
+	<string>3</string>
 	<key>1100</key>
 	<string>3</string>
 	<key>1120</key>
 	<string>3</string>
-	<key>1140</key>
+	<key>1135</key>
+	<string>3</string>
+	<key>1150</key>
 	<string>3</string>
 	<key>1210</key>
 	<string>3</string>
-	<key>1230</key>
+	<key>1225</key>
 	<string>3</string>
-	<key>1250</key>
+	<key>1240</key>
+	<string>3</string>
+	<key>1300</key>
 	<string>3</string>
 	<key>1310</key>
 	<string>3</string>
-	<key>1330</key>
+	<key>1320</key>
 	<string>3</string>
-	<key>1410</key>
+	<key>1350</key>
+	<string>3</string>
+	<key>1405</key>
+	<string>3</string>
+	<key>1420</key>
 	<string>3</string>
 	<key>1435</key>
 	<string>3</string>
-	<key>1510</key>
+	<key>1450</key>
+	<string>3</string>
+	<key>1505</key>
+	<string>3</string>
+	<key>1512</key>
 	<string>3</string>
 	<key>1520</key>
 	<string>3</string>
-	<key>1540</key>
+	<key>1533</key>
 	<string>3</string>
-	<key>1610</key>
+	<key>1543</key>
 	<string>3</string>
-	<key>1630</key>
+	<key>1550</key>
 	<string>3</string>
-	<key>1645</key>
+	<key>1605</key>
 	<string>3</string>
-	<key>1710</key>
+	<key>1629</key>
 	<string>3</string>
-	<key>1730</key>
+	<key>1638</key>
 	<string>3</string>
-	<key>1745</key>
+	<key>1650</key>
+	<string>3</string>
+	<key>1705</key>
+	<string>3</string>
+	<key>1735</key>
 	<string>3</string>
 	<key>1805</key>
 	<string>3</string>
 	<key>1820</key>
 	<string>3</string>
-	<key>1845</key>
+	<key>1835</key>
 	<string>3</string>
 	<key>1905</key>
 	<string>3</string>
 	<key>1920</key>
 	<string>3</string>
-	<key>1945</key>
+	<key>1935</key>
 	<string>3</string>
-	<key>2000</key>
+	<key>1950</key>
 	<string>3</string>
-	<key>2015</key>
+	<key>2005</key>
 	<string>3</string>
-	<key>2045</key>
+	<key>2020</key>
 	<string>3</string>
-	<key>2100</key>
+	<key>2035</key>
 	<string>3</string>
-	<key>2120</key>
+	<key>2050</key>
 	<string>3</string>
-	<key>2140</key>
+	<key>2110</key>
 	<string>3</string>
-	<key>2210</key>
+	<key>2135</key>
+	<string>3</string>
+	<key>2205</key>
+	<string>3</string>
+	<key>2235</key>
 	<string>3</string>
 	<key>2300</key>
 	<string>3</string>

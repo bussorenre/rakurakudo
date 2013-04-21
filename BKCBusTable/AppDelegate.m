@@ -17,7 +17,6 @@
 {
     [splashImageView release];
     [viewContoller release];
-    [dateController release];
     [_window release];
     [super dealloc];
 }
@@ -62,6 +61,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    //更新
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"applicationDidBecomeActive" object:nil];
+    NSLog(@"更新しました");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -22,7 +22,7 @@
 
 @implementation FromRitsViewController
 @synthesize view1,view2_1,view2,view3,view3_1,view4,view4_1,view5,view5_1,view6,view6_1,view7,view7_1,view8,view9,view10,view10_1,view11,view11_1,view12,view13,view14,view14_1,view15,view15_1,view16,view16_1,view17,view17_1;
-@synthesize adView;
+//@synthesize adView;
 @synthesize dateController;
 @synthesize label2,label2_2,label2_3,label2_4,
 label3,label3_2,
@@ -35,7 +35,7 @@ label11,label11_2,label11_3,label11_4,label12_2,label13_2,label14_2,
 label15,label15_2,label16_2,
 label17,label17_2,label17_3,label17_4;
 -(id)init{
-
+    NSLog(@"init in fromRitsViewController");
     self = [super init];
     if(self){
         
@@ -163,7 +163,7 @@ label17,label17_2,label17_3,label17_4;
         label1.backgroundColor = [UIColor clearColor];
         label1.textAlignment = NSTextAlignmentCenter;
         label1.font = [UIFont fontWithName:@"Marker Felt" size:20];
-        label1.text = @"南草津";
+        label1.text = @"南草津行き";
         //[[view1 layer] setBorderColor:[RGB(0,0,0) CGColor]];
         //[[view1 layer] setBorderWidth:1.0f];
         [self.view1 addSubview:label1];
@@ -374,7 +374,7 @@ label17,label17_2,label17_3,label17_4;
         lbl5_1.backgroundColor = [UIColor clearColor];
         lbl5_1.numberOfLines = 1;
         lbl5_1.textAlignment = NSTextAlignmentCenter;
-        lbl5_1.text = @"パナ";
+        lbl5_1.text = @"パナ経由";
         [self.view5_1 addSubview:lbl5_1];
         [self.view addSubview:view5_1];
         
@@ -431,7 +431,7 @@ label17,label17_2,label17_3,label17_4;
         lbl7_1.backgroundColor = [UIColor clearColor];
         lbl7_1.numberOfLines = 1;
         lbl7_1.textAlignment = NSTextAlignmentCenter;
-        lbl7_1.text = @"草津";
+        lbl7_1.text = @"草津行き";
         [self.view7_1 addSubview:lbl7_1];
         [self.view addSubview:view7_1];
         /*
@@ -508,7 +508,7 @@ label17,label17_2,label17_3,label17_4;
         lbl11_1.backgroundColor = [UIColor clearColor];
         lbl11_1.numberOfLines = 1;
         lbl11_1.textAlignment = NSTextAlignmentCenter;
-        lbl11_1.text = @"瀬田";
+        lbl11_1.text = @"瀬田行き";
         [self.view11_1 addSubview:lbl11_1];
         [self.view addSubview:view11_1];
         /*
@@ -663,7 +663,7 @@ label17,label17_2,label17_3,label17_4;
         lbl15_1.backgroundColor = [UIColor clearColor];
         lbl15_1.textAlignment = NSTextAlignmentCenter;
         lbl15_1.numberOfLines = 1;
-        lbl15_1.text = @"衣笠";
+        lbl15_1.text = @"衣笠行き";
         [self.view15_1 addSubview:lbl15_1];
         [self.view addSubview:view15_1];
         
@@ -713,91 +713,22 @@ label17,label17_2,label17_3,label17_4;
         lbl17_1.backgroundColor = [UIColor clearColor];
         lbl17_1.numberOfLines = 1;
         lbl17_1.textAlignment = NSTextAlignmentCenter;
-        lbl17_1.text = @"中書島";
+        lbl17_1.text = @"中書島行き";
         [self.view17_1 addSubview:lbl17_1];
         [self.view addSubview:view17_1];
         
         
-        //initでupdateメソッドを使う
-        
-        
-        
-        /*AdWhirl設定*/
-        /*
-        adView = [AdWhirlView requestAdWhirlViewWithDelegate:self];
-        adView.frame = CGRectMake(0.0, 480.0, 320.0, 50.0);
-        [self.view addSubview:adView];
-        
-        */
-     
-        
-        
-        //NSArray *arr = [NSArray arrayWithObjects:view1,view2,view3,view4,view5,view6,view7,view8,view9,view10, nil];
-    /*
-        //ツールバー生成
-        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-        //[self.navigationController setToolbarHidden:NO animated:NO];
-        toolbar.barStyle = UIBarStyleBlackTranslucent;
-        toolbar.backgroundColor = [UIColor blackColor];
-        [self.view addSubview:toolbar];
-        //ボタン生成
-        UIBarButtonItem *button1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(update)];
-        UIBarButtonItem *flexible = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        NSArray *items = [[NSArray alloc]initWithObjects:flexible,button1,nil];
-        [toolbar setItems:items];
-    
-        */
-    }
+        }
 return self;
     //[self dealloc];
 }
--(void)update{
-    dateController = [[DateController alloc]init];
-    int num = [self.dateController returnMin:10];
-    label16_2.text = [NSString stringWithFormat:@"%3d",num];
-    
-}
+
 
 -(void)dealloc{
     //[self release];
     [super dealloc];
 }
 
-/*AdWhirlデリゲート*/
-/*
-- (NSString *)adWhirlApplicationKey
-{
-    return @"aaf418439d504dc3b2b9ccc3b234dad4";
-}
--(UIViewController *)viewControllerForPresentingModalView
-{
-    return self;
-}
-- (void)adWhirlDidReceiveAd:(AdWhirlView *)adWhirlView {
-    
-    [UIView beginAnimations:@"AdWhirlDelegate.adWhirlDidReceiveAd:" context:nil];
-    [UIView setAnimationDuration:2.0];
-    CGSize adSize = [adWhirlView actualAdSize];
-    CGRect newFrame = adWhirlView.frame;
-    newFrame.size = adSize;
-    newFrame.origin.x = (320 - adSize.width) / 2;
-    CGRect frame = [[UIScreen mainScreen] applicationFrame];
-    if (frame.size.height==548.0) { // iPhone 4inch (568 - 20 px)
-        
-        newFrame.origin.y = 498 - adSize.height;
-
-        
-        
-    } else { // iPhone 3.5inch
-        
-        newFrame.origin.y = 420 - adSize.height;
-        
-        
-    }
-    
-    adWhirlView.frame = newFrame;
-    [UIView commitAnimations];
-}*/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

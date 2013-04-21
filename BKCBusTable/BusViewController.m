@@ -331,7 +331,7 @@ titleForHeaderInSection:(NSInteger)section{
             break;
     }
     lbl2.text = str2;
-    [self.cell.contentView addSubview];
+  //  [self.cell.contentView addSubview];
 }
 //各行の高さの設定
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

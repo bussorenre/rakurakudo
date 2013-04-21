@@ -2,31 +2,61 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>830</key>
+	<key>905</key>
 	<string>1</string>
 	<key>930</key>
 	<string>1</string>
-	<key>1030</key>
+	<key>1025</key>
+	<string>1</string>
+	<key>1055</key>
 	<string>1</string>
 	<key>1130</key>
 	<string>1</string>
-	<key>1300</key>
+	<key>1200</key>
 	<string>1</string>
-	<key>1400</key>
+	<key>1230</key>
+	<string>1</string>
+	<key>1315</key>
+	<string>1</string>
+	<key>1330</key>
+	<string>1</string>
+	<key>1355</key>
+	<string>1</string>
+	<key>1430</key>
 	<string>1</string>
 	<key>1455</key>
 	<string>1</string>
-	<key>1555</key>
+	<key>1535</key>
 	<string>1</string>
-	<key>1655</key>
+	<key>1545</key>
 	<string>1</string>
-	<key>1755</key>
+	<key>1600</key>
 	<string>1</string>
-	<key>1855</key>
+	<key>1630</key>
 	<string>1</string>
-	<key>2025</key>
+	<key>1645</key>
+	<string>1</string>
+	<key>1700</key>
+	<string>1</string>
+	<key>1800</key>
+	<string>1</string>
+	<key>1830</key>
+	<string>1</string>
+	<key>1845</key>
+	<string>1</string>
+	<key>1915</key>
+	<string>1</string>
+	<key>1930</key>
+	<string>1</string>
+	<key>2000</key>
+	<string>1</string>
+	<key>2030</key>
+	<string>1</string>
+	<key>2100</key>
 	<string>1</string>
 	<key>2130</key>
+	<string>1</string>
+	<key>2155</key>
 	<string>1</string>
 </dict>
 </plist>

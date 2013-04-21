@@ -29,8 +29,31 @@
     if (self) {
         // Custom initialization
         dateController = [[DateController alloc]init];
-        arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:2]];
-        arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+        
+        
+        //曜日取得、場合分け
+        NSDate *dateNow = [NSDate date];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSUInteger flags;
+        NSDateComponents *comps;
+        //現在時刻取得
+        flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+        comps = [calendar components:flags fromDate:dateNow];
+        //曜日取得
+        comps = [calendar components:NSWeekdayCalendarUnit fromDate:dateNow];
+        NSInteger weekday = comps.weekday; // 曜日(1が日曜日 7が土曜日)
+        
+       //weekday = 1;
+        
+        if(weekday == 7 || weekday == 1){
+            arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:4]];
+            arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+
+            
+        }else{
+            arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:2]];
+            arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+        }
         
     }
     
@@ -40,6 +63,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+
     //dateController = [[DateController alloc]init];
     
     
@@ -84,7 +109,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         case 1://直行
             cell.backgroundColor = RGB(99, 184, 255);
             break;
-        case 2://かがやき
+        case 2://かがやき（直行）
             cell.backgroundColor = RGB(99, 184, 255);
             break;
         case 3://パナ
@@ -96,13 +121,13 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         case 5://瀬田
             cell.backgroundColor = RGB(205, 205, 0);
             break;
-        case 6://衣笠
-            cell.backgroundColor = RGB(159,121,238);
-            break;
-        case 7://中書島
+        case 6://衣笠159,121,238
             cell.backgroundColor = RGB(238, 59, 59);
             break;
-        default:
+        case 7://中書島
+            cell.backgroundColor = RGB(159,121,238);
+            break;
+            default:
             NSLog(@"色の判定ができません");
             break;
     }

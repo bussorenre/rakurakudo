@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GADBannerView.h"
 
 @interface TabBarController : UITabBarController
 {
@@ -16,5 +17,6 @@
 }
 @property(nonatomic,retain)UITabBarItem *tbi1,*tbi2,*tbi3,*tbi4;
 @property(nonatomic,retain)UINavigationBar *navi;
+@property(nonatomic,retain)GADBannerView *adBanner;
 -(void)update:(BOOL)bl;
 @end

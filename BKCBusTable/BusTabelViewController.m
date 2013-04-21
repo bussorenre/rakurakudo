@@ -13,6 +13,7 @@
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 
+
 @interface BusTabelViewController ()
 
 @end
@@ -21,15 +22,37 @@
 @synthesize dateController;
 @synthesize arr;
 @synthesize arrForColor;
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
        dateController = [[DateController alloc]init];
-        arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:1]];
-        arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+        
+        //曜日取得、場合分け
+        NSDate *dateNow = [NSDate date];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSUInteger flags;
+        NSDateComponents *comps;
+        //現在時刻取得
+        flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+        comps = [calendar components:flags fromDate:dateNow];
+        //曜日取得
+        comps = [calendar components:NSWeekdayCalendarUnit fromDate:dateNow];
+        NSInteger weekday = comps.weekday; // 曜日(1が日曜日 7が土曜日)
+        
+ 
+        //weekday = 1;
+        
+        if(weekday == 7 || weekday == 1){
+            arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:3]];
+            arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+            
+            
+        }else{
+            arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:1]];
+            arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
+        }
  
     }
     
@@ -96,10 +119,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             cell.backgroundColor = RGB(205, 205, 0);
             break;
         case 6://衣笠
-            cell.backgroundColor = RGB(159,121,238);
-            break;
-        case 7://中書島
             cell.backgroundColor = RGB(238, 59, 59);
+            break;
+        case 7://中書島238, 59, 59
+            cell.backgroundColor = RGB(159,121,238);
             break;
         default:
             NSLog(@"色の判定ができません");
