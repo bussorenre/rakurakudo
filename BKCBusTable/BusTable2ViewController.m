@@ -54,7 +54,6 @@
             arr = [[NSMutableArray alloc]initWithArray:[self.dateController returnArrToBusTable:2]];
             arrForColor = [[NSArray alloc]initWithArray:self.dateController.arrForColor];
         }
-        
     }
     
     return self;

@@ -6,6 +6,11 @@
 //  Copyright (c) 2013年 sato daisuke. All rights reserved.
 //
 
+//  追加する機能: (現在)時刻表は要素数０から表示する。(変更時)現在時刻からその時間(h)を取得してその時間から表示させる
+//  追加する機能: (現在)時刻表をpリストに保存している。(変更時)データベースに時刻表を保存しておき、サーバから時刻表を取ってくる
+//  追加する機能: (現在)次のバスだけを表示している。(変更時)次の次のバスまで表示する。
+//    
+
 #import "ViewController.h"
 
 
@@ -25,6 +30,9 @@
 @synthesize toRitsViewController;
 @synthesize busTableViewController;
 @synthesize busTable2ViewController;
+@synthesize addCellsViewController;
+
+@synthesize tableViewFromUniv;
 -(id)init{
     
     CGRect frame = [[UIScreen mainScreen]applicationFrame];
@@ -50,18 +58,22 @@
     busTableViewController = [[BusTabelViewController alloc]init];
     busTable2ViewController = [[BusTable2ViewController alloc]init];
     
+    //追加
+    //tableViewFromUniv = [[tableViewFromUnivController alloc]init];
+    //newRits = [[newRitsViewController alloc]init];
+    addCellsViewController = [[AddCellsBetweenCellsController alloc]init];
     
     [self update];
     
     
     
-    NSArray *controllers = [NSArray arrayWithObjects:toRitsViewController,fromRitsViewController,busTable2ViewController,busTableViewController, nil];
+    NSArray *controllers = [NSArray arrayWithObjects:addCellsViewController,fromRitsViewController,busTable2ViewController,busTableViewController, nil];
     [tabBarController setViewControllers:controllers animated:NO];
     [[UITabBarItem appearance] setAccessibilityFrame:CGRectMake(0,0,320,30)];
     
     
     tabBarController.tbi1 = [tabBarController.tabBar.items objectAtIndex:0];
-    tabBarController.tbi1.title = @"立命館行き";
+    tabBarController.tbi1.title = @"test";
     tabBarController.tbi2 = [tabBarController.tabBar.items objectAtIndex:1];
     tabBarController.tbi2.title = @"立命館発";
     tabBarController.tbi3 = [tabBarController.tabBar.items objectAtIndex:2];
@@ -214,6 +226,7 @@
 {
 
     NSLog(@"Admobの広告表示に成功しました");
+    
 }
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
 {

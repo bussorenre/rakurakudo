@@ -13,6 +13,10 @@
 #import "DateController.h"
 #import "BusTabelViewController.h"
 #import "BusTable2ViewController.h"
+#import "AddCellsBetweenCellsController.h"
+
+#import "tableViewFromUnivController.h"
+#import "newRitsViewController.h"
 
 @interface ViewController : UIViewController 
 {
@@ -24,4 +28,7 @@
 @property(nonatomic,retain)ToRitsViewController *toRitsViewController;
 @property(nonatomic,retain)BusTabelViewController *busTableViewController;
 @property(nonatomic,retain)BusTable2ViewController *busTable2ViewController;
+@property(nonatomic,retain)tableViewFromUnivController *tableViewFromUniv;
+//@property(nonatomic,retain)newRitsViewController *newRits;
+@property(nonatomic,retain)AddCellsBetweenCellsController *addCellsViewController;
 @end

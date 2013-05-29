@@ -47,4 +47,6 @@
 -(NSMutableArray *)sort:(NSArray *)arr;
 //-(NSMutableArray *)sortArr:(NSMutableArray *)arr;
 -(NSMutableArray *)returnArrToBusTable:(int)i;
+-(NSMutableArray *)outputArrForColor;
+
 @end

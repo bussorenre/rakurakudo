@@ -438,6 +438,12 @@
 
     
 }
+
+-(NSMutableArray *)outputArrForColor{
+    [self sortForTable];
+    return arrForColor;
+}
+
 -(NSMutableArray *)returnArrToBusTable:(int)n{
     
     

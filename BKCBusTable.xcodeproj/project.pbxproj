@@ -78,6 +78,9 @@
 		BE8C5E8616F5F7330068C5FA /* tTableMKS_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8516F5F7330068C5FA /* tTableMKS_1.plist */; };
 		BE8C5E8816F5F7B90068C5FA /* tTableMKS_2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */; };
 		BE9D544F16FA0175008E4090 /* BusTabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9D544E16FA0175008E4090 /* BusTabelViewController.m */; };
+		BEC7C962173D5B1300153287 /* newRitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7C961173D5B1300153287 /* newRitsViewController.m */; };
+		BEC7C965173D5DC400153287 /* tableViewFromUnivController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC7C964173D5DC400153287 /* tableViewFromUnivController.m */; };
+		BEDBF767174A4F11009D32A8 /* AddCellsBetweenCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDBF766174A4F11009D32A8 /* AddCellsBetweenCellsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +188,12 @@
 		BE8C5E8716F5F7B80068C5FA /* tTableMKS_2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tTableMKS_2.plist; sourceTree = "<group>"; };
 		BE9D544D16FA0175008E4090 /* BusTabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusTabelViewController.h; sourceTree = "<group>"; };
 		BE9D544E16FA0175008E4090 /* BusTabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusTabelViewController.m; sourceTree = "<group>"; };
+		BEC7C960173D5B1300153287 /* newRitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newRitsViewController.h; sourceTree = "<group>"; };
+		BEC7C961173D5B1300153287 /* newRitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newRitsViewController.m; sourceTree = "<group>"; };
+		BEC7C963173D5DC400153287 /* tableViewFromUnivController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewFromUnivController.h; sourceTree = "<group>"; };
+		BEC7C964173D5DC400153287 /* tableViewFromUnivController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewFromUnivController.m; sourceTree = "<group>"; };
+		BEDBF765174A4F11009D32A8 /* AddCellsBetweenCellsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCellsBetweenCellsController.h; sourceTree = "<group>"; };
+		BEDBF766174A4F11009D32A8 /* AddCellsBetweenCellsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCellsBetweenCellsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +254,7 @@
 				BE8C5E0416F4E18F0068C5FA /* testViewController.m */,
 				BE60906E16FF4E2700455556 /* BusViewController.m */,
 				BE60906D16FF4E1F00455556 /* BusViewController.h */,
+				BEDBF764174A4EB8009D32A8 /* AddCellsBetweenCells */,
 				BE88C6EB16EDE930008C6EF4 /* MessageUI.framework */,
 				BE88C6E916EDE924008C6EF4 /* SystemConfiguration.framework */,
 				BE88C6E316EDE8DB008C6EF4 /* MapKit.framework */,
@@ -286,6 +296,10 @@
 				BE00A6CC16E6DC93007097D0 /* MainStoryboard.storyboard */,
 				BE00A6CF16E6DC93007097D0 /* ViewController.h */,
 				BE00A6D016E6DC93007097D0 /* ViewController.m */,
+				BEC7C963173D5DC400153287 /* tableViewFromUnivController.h */,
+				BEC7C964173D5DC400153287 /* tableViewFromUnivController.m */,
+				BEC7C960173D5B1300153287 /* newRitsViewController.h */,
+				BEC7C961173D5B1300153287 /* newRitsViewController.m */,
 				BE00A78816EB070E007097D0 /* FromRitsViewController.h */,
 				BE00A78916EB070E007097D0 /* FromRitsViewController.m */,
 				BE88C5A116EC494E008C6EF4 /* ToRitsViewController.h */,
@@ -367,6 +381,15 @@
 				BE00A6E116E6DC93007097D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEDBF764174A4EB8009D32A8 /* AddCellsBetweenCells */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBF765174A4F11009D32A8 /* AddCellsBetweenCellsController.h */,
+				BEDBF766174A4F11009D32A8 /* AddCellsBetweenCellsController.m */,
+			);
+			name = AddCellsBetweenCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,6 +549,9 @@
 				BE9D544F16FA0175008E4090 /* BusTabelViewController.m in Sources */,
 				BE60906416FE319D00455556 /* BusTable2ViewController.m in Sources */,
 				BE60906F16FF4E2700455556 /* BusViewController.m in Sources */,
+				BEC7C962173D5B1300153287 /* newRitsViewController.m in Sources */,
+				BEC7C965173D5DC400153287 /* tableViewFromUnivController.m in Sources */,
+				BEDBF767174A4F11009D32A8 /* AddCellsBetweenCellsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +660,8 @@
 		BE00A6EA16E6DC93007097D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: daisuke sato";
+				CODE_SIGN_IDENTITY = "iPhone Developer: daisuke sato (9MF8K8KAXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BKCBusTable/BKCBusTable-Prefix.pch";
 				INFOPLIST_FILE = "BKCBusTable/BKCBusTable-Info.plist";
@@ -652,7 +679,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "440E4136-BA40-40B3-8D89-7510010EB8CB";
+				PROVISIONING_PROFILE = "CB99D4BF-6115-4F21-96DC-CAF9EBCA9E8B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -662,7 +690,7 @@
 		BE00A6EB16E6DC93007097D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: daisuke sato";
+				CODE_SIGN_IDENTITY = "iPhone Developer: daisuke sato (9MF8K8KAXA)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BKCBusTable/BKCBusTable-Prefix.pch";
 				INFOPLIST_FILE = "BKCBusTable/BKCBusTable-Info.plist";
@@ -680,7 +708,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "440E4136-BA40-40B3-8D89-7510010EB8CB";
+				PROVISIONING_PROFILE = "CB99D4BF-6115-4F21-96DC-CAF9EBCA9E8B";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

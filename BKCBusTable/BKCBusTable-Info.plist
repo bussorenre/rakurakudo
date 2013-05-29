@@ -20,7 +20,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>9S2W4C6VNX.com.daisukeSato.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.daisukeSato.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
